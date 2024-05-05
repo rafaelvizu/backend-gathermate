@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CidadeController;
 use App\Http\Controllers\V1\ManageUser;
 use App\Http\Controllers\V1\UserController;
 use Illuminate\Support\Facades\Route;
@@ -31,6 +32,11 @@ Route::prefix('v1')->group(function () {
             ->name('v1.updateProfile');
     });
 
+    Route::middleware('auth:sanctum')->prefix('dict')->group(function () {
+       Route::get('cidades', [CidadeController::class, 'index'])
+           ->name('v1.cidades.index');
+    });
+
     Route::middleware(['auth:sanctum', 'can:admin'])->prefix('manage')->group(function () {
         Route::get('users', [ManageUser::class, 'index'])
             ->name('v1.manage.users');
@@ -48,8 +54,9 @@ Route::prefix('v1')->group(function () {
             ->name('v1.manage.users.new-temp-password');
 
     });
+
 });
 
 Route::fallback(function () {
-    return response()->json(['message' => 'Não encontrado!'], 404);
+    return response()->json(['message' => 'Not Found!'], 404);
 })->name('api.fallback.404');
