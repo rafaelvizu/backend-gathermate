@@ -10,9 +10,6 @@ use Knuckles\Scribe\Attributes\Response;
 
 class EventoController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
 
     #[Response(content: ['data' => ['evento'], 'message' => 'Sucesso!'], status: 200)]
     #[Authenticated]
