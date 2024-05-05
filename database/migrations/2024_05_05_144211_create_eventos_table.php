@@ -26,9 +26,6 @@ return new class extends Migration
             $table->text('cep')->nullable();
             $table->text('estado')->nullable();
 
-
-            $table->text('pais');
-
             $table->timestamps();
         });
     }

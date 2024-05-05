@@ -51,8 +51,6 @@ class EventoController extends Controller
             'cep' => 'nullable|regex:/\d{5}-\d{3}/',
             'estado' => 'nullable|regex:/[A-Z]{2}/',
 
-            'pais' => 'required|min:3|max:50',
-
         ]);
 
         $evento = Evento::create([
@@ -68,7 +66,6 @@ class EventoController extends Controller
             'cep' => $request->cep,
             'estado' => $request->estado,
 
-            'pais' => $request->pais,
         ]);
 
         $response_json = [
@@ -115,7 +112,6 @@ class EventoController extends Controller
             'cep' => 'nullable|regex:/\d{5}-\d{3}/',
             'estado' => 'nullable|regex:/[A-Z]{2}/',
 
-            'pais' => 'required|min:3|max:50',
 
         ]);
 
@@ -131,8 +127,6 @@ class EventoController extends Controller
             'cidade' => $request->cidade,
             'cep' => $request->cep,
             'estado' => $request->estado,
-
-            'pais' => $request->pais,
         ]);
 
         $response_json = [
