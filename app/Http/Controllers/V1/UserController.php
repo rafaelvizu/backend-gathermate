@@ -6,13 +6,14 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Knuckles\Scribe\Attributes\Authenticated;
 use Knuckles\Scribe\Attributes\Response;
+use Knuckles\Scribe\Attributes\Unauthenticated;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
 class UserController extends Controller
 {
 
     #[Response(content: ['data' => ['user'], 'message' => 'Sucesso!'], status: 200)]
-
+    #[Unauthenticated]
     public function login(Request $request): JsonResponse {
         $request->validate([
             'email' => 'required|email',
