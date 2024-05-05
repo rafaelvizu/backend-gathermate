@@ -1,0 +1,377 @@
+openapi: 3.0.3
+info:
+  title: 'API Documentation'
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost:8000'
+paths:
+  /api/v1/auth/login:
+    post:
+      summary: ''
+      operationId: postApiV1AuthLogin
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    - user
+                  message: Sucesso!
+                properties:
+                  data:
+                    type: array
+                    example:
+                      - user
+                    items:
+                      type: string
+                  message:
+                    type: string
+                    example: Sucesso!
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: 'O campo value deve ser um endereço de e-mail válido.'
+                  example: nbode@example.org
+                password:
+                  type: string
+                  description: ''
+                  example: corrupti
+              required:
+                - email
+                - password
+      security: []
+  /api/v1/auth/logout:
+    post:
+      summary: ''
+      operationId: postApiV1AuthLogout
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Logged out'
+                properties:
+                  message:
+                    type: string
+                    example: 'Logged out'
+      tags:
+        - Endpoints
+  /api/v1/auth/me:
+    get:
+      summary: ''
+      operationId: getApiV1AuthMe
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    user: User
+                  message: Sucesso!
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      user:
+                        type: string
+                        example: User
+                  message:
+                    type: string
+                    example: Sucesso!
+      tags:
+        - Endpoints
+  /api/v1/auth/reset-password:
+    post:
+      summary: ''
+      operationId: postApiV1AuthResetPassword
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Senha alterada!'
+                properties:
+                  message:
+                    type: string
+                    example: 'Senha alterada!'
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                password:
+                  type: string
+                  description: 'O campo value deve ter pelo menos 6 caracteres. O campo value não pode ser superior a 255 caracteres.'
+                  example: 'DH=FeMeEU[9F$G'
+                old_password:
+                  type: string
+                  description: 'O campo value deve ter pelo menos 6 caracteres. O campo value não pode ser superior a 255 caracteres.'
+                  example: knusmt
+              required:
+                - password
+                - old_password
+  /api/v1/auth/updateProfile:
+    post:
+      summary: ''
+      operationId: postApiV1AuthUpdateProfile
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Perfil atualizado!'
+                properties:
+                  message:
+                    type: string
+                    example: 'Perfil atualizado!'
+      tags:
+        - Endpoints
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: null
+  /api/v1/manage/users:
+    get:
+      summary: ''
+      operationId: getApiV1ManageUsers
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    - user
+                  message: Sucesso!
+                properties:
+                  data:
+                    type: array
+                    example:
+                      - user
+                    items:
+                      type: string
+                  message:
+                    type: string
+                    example: Sucesso!
+      tags:
+        - Endpoints
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                page:
+                  type: integer
+                  description: 'O campo value deve ser pelo menos 1.'
+                  example: 74
+                per_page:
+                  type: integer
+                  description: 'O campo value deve ser pelo menos 1. O campo value não pode ser superior a 300.'
+                  example: 16
+    post:
+      summary: ''
+      operationId: postApiV1ManageUsers
+      description: ''
+      parameters: []
+      responses:
+        201:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    user: User
+                  message: Sucesso!
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      user:
+                        type: string
+                        example: User
+                  message:
+                    type: string
+                    example: Sucesso!
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres.'
+                  example: pmlqhrmnsicpoycnywohyuzmr
+                email:
+                  type: string
+                  description: 'O campo value deve ser um endereço de e-mail válido.'
+                  example: boyle.thurman@example.net
+              required:
+                - name
+                - email
+  '/api/v1/manage/users/{id}':
+    get:
+      summary: ''
+      operationId: getApiV1ManageUsersId
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    user: User
+                  message: Sucesso!
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      user:
+                        type: string
+                        example: User
+                  message:
+                    type: string
+                    example: Sucesso!
+      tags:
+        - Endpoints
+    put:
+      summary: ''
+      operationId: putApiV1ManageUsersId
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Sucesso!
+                properties:
+                  message:
+                    type: string
+                    example: Sucesso!
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: null
+                is_active:
+                  type: boolean
+                  description: ''
+                  example: false
+              required:
+                - is_active
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the user.'
+        example: dolorem
+        required: true
+        schema:
+          type: string
+  '/api/v1/manage/users/{user_id}/new-temp-password':
+    post:
+      summary: ''
+      operationId: postApiV1ManageUsersUser_idNewTempPassword
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Sucesso!
+                properties:
+                  message:
+                    type: string
+                    example: Sucesso!
+      tags:
+        - Endpoints
+    parameters:
+      -
+        in: path
+        name: user_id
+        description: 'The ID of the user.'
+        example: velit
+        required: true
+        schema:
+          type: string
+tags:
+  -
+    name: Endpoints
+    description: ''
