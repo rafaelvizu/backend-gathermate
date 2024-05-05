@@ -5,12 +5,12 @@
             "key": "baseUrl",
             "type": "string",
             "name": "string",
-            "value": "http:\/\/localhost:8000"
+            "value": "https:\/\/test.datime.com.br"
         }
     ],
     "info": {
         "name": "API Documentation",
-        "_postman_id": "31320e78-1e67-4e75-8e04-1d52c05db41c",
+        "_postman_id": "1a81db23-97b1-4916-a382-078fb0be8305",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"kaylah.douglas@example.com\",\"password\":\"explicabo\"}"
+                            "raw": "{\"email\":\"purdy.hermina@example.com\",\"password\":\"voluptate\"}"
                         },
                         "description": "",
                         "auth": {
@@ -143,7 +143,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"password\":\"e[&d$<t!q#[hOoDJ\",\"old_password\":\"isuhypbsugneyza\"}"
+                            "raw": "{\"password\":\"C10_1*'4\",\"old_password\":\"sj\"}"
                         },
                         "description": ""
                     },
@@ -213,7 +213,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"page\":75,\"per_page\":19}"
+                            "raw": "{\"page\":66,\"per_page\":18}"
                         },
                         "description": ""
                     },
@@ -238,7 +238,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "nobis",
+                                    "value": "facilis",
                                     "description": "The ID of the user."
                                 }
                             ]
@@ -288,7 +288,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"bzuamor\",\"email\":\"velma.price@example.org\"}"
+                            "raw": "{\"name\":\"iiuiynozqmksycfitvdue\",\"email\":\"darwin39@example.org\"}"
                         },
                         "description": ""
                     },
@@ -313,7 +313,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "totam",
+                                    "value": "modi",
                                     "description": "The ID of the user."
                                 }
                             ]
@@ -331,7 +331,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"is_active\":true}"
+                            "raw": "{\"is_active\":false}"
                         },
                         "description": ""
                     },
@@ -356,7 +356,7 @@
                                 {
                                     "id": "user_id",
                                     "key": "user_id",
-                                    "value": "harum",
+                                    "value": "vel",
                                     "description": "The ID of the user."
                                 }
                             ]
@@ -388,6 +388,12 @@
         }
     ],
     "auth": {
-        "type": "noauth"
+        "type": "bearer",
+        "bearer": [
+            {
+                "key": "key",
+                "type": "string"
+            }
+        ]
     }
 }

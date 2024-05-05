@@ -5,7 +5,7 @@ info:
   version: 1.0.0
 servers:
   -
-    url: 'http://localhost:8000'
+    url: 'https://test.datime.com.br'
 paths:
   /api/v1/auth/login:
     post:
@@ -46,11 +46,11 @@ paths:
                 email:
                   type: string
                   description: 'O campo value deve ser um endereço de e-mail válido.'
-                  example: kaylah.douglas@example.com
+                  example: purdy.hermina@example.com
                 password:
                   type: string
                   description: ''
-                  example: explicabo
+                  example: voluptate
               required:
                 - email
                 - password
@@ -136,11 +136,11 @@ paths:
                 password:
                   type: string
                   description: 'O campo value deve ter pelo menos 6 caracteres. O campo value não pode ser superior a 255 caracteres.'
-                  example: 'e[&d$<t!q#[hOoDJ'
+                  example: "C10_1*'4"
                 old_password:
                   type: string
                   description: 'O campo value deve ter pelo menos 6 caracteres. O campo value não pode ser superior a 255 caracteres.'
-                  example: isuhypbsugneyza
+                  example: sj
               required:
                 - password
                 - old_password
@@ -215,11 +215,11 @@ paths:
                 page:
                   type: integer
                   description: 'O campo value deve ser pelo menos 1.'
-                  example: 75
+                  example: 66
                 per_page:
                   type: integer
                   description: 'O campo value deve ser pelo menos 1. O campo value não pode ser superior a 300.'
-                  example: 19
+                  example: 18
     post:
       summary: ''
       operationId: postApiV1ManageUsers
@@ -258,11 +258,11 @@ paths:
                 name:
                   type: string
                   description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres.'
-                  example: bzuamor
+                  example: iiuiynozqmksycfitvdue
                 email:
                   type: string
                   description: 'O campo value deve ser um endereço de e-mail válido.'
-                  example: velma.price@example.org
+                  example: darwin39@example.org
               required:
                 - name
                 - email
@@ -329,7 +329,7 @@ paths:
                 is_active:
                   type: boolean
                   description: ''
-                  example: true
+                  example: false
               required:
                 - is_active
     parameters:
@@ -337,7 +337,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the user.'
-        example: nobis
+        example: facilis
         required: true
         schema:
           type: string
@@ -367,7 +367,7 @@ paths:
         in: path
         name: user_id
         description: 'The ID of the user.'
-        example: harum
+        example: vel
         required: true
         schema:
           type: string
@@ -375,3 +375,12 @@ tags:
   -
     name: Endpoints
     description: ''
+components:
+  securitySchemes:
+    default:
+      type: http
+      scheme: bearer
+      description: 'You can retrieve your token by visiting your dashboard and clicking <b>Generate API token</b>.'
+security:
+  -
+    default: []

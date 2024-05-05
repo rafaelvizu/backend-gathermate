@@ -78,9 +78,8 @@ class EventoController extends Controller
         return response()->json([$response_json], 201);
     }
 
-    /**
-     * Display the specified resource.
-     */
+   #[Response(content: ['data' => ['evento'], 'message' => 'Sucesso!'], status: 200)]
+    #[Authenticated]
     public function show(Evento $evento)
     {
         //
