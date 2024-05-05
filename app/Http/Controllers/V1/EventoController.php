@@ -4,38 +4,47 @@ namespace App\Http\Controllers\V1;
 
 use App\Http\Controllers\Controller;
 use App\Models\Evento;
+use App\Models\Cidade;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Knuckles\Scribe\Attributes\Authenticated;
+use Knuckles\Scribe\Attributes\Group;
 use Knuckles\Scribe\Attributes\Response;
 
 class EventoController extends Controller
 {
 
-    #[Response(content: ['data' => ['evento'], 'message' => 'Sucesso!'], status: 200)]
+    #[Group(name: 'Eventos')]
+    #[Response(content: ['data' => ['evento'], 'message' => 'Sucesso!', 'current_page' => 1, 'per_page' => 15, 'total' => 1], status: 200)]
     #[Authenticated]
-    public function index(Request $request)
+    public function index(Request $request): JsonResponse
     {
         //
         $request->validate([
             'page' => 'integer|min:1',
             'per_page' => 'integer|min:1|max:300',
+            'search' => 'nullable|string|min:3|max:50',
         ]);
 
-        $eventos = Evento::paginate($request->per_page, ['*'], 'page', $request->page);
+        $eventos = Evento::when($request->search, function ($query, $search) {
+            return $query->where('nome', 'like', "%$search%");
+        })->paginate($request->per_page, ['*'], 'page', $request->page);
 
         return response()->json([
-            'data' => [
-                'evento' => $eventos,
-            ],
-            'message' => 'Sucesso!'
+            'data' => $eventos->items(),
+            'message' => 'Sucesso!',
+            'current_page' => $eventos->currentPage(),
+            'per_page' => $eventos->perPage(),
+            'total' => $eventos->total(),
         ]);
     }
 
 
 
+    #[Group(name: 'Eventos')]
     #[Response(content: ['data' => ['evento'], 'message' => 'Sucesso!'], status: 201)]
     #[Authenticated]
-    public function store(Request $request)
+    public function store(Request $request): JsonResponse
     {
         //
         $request->validate([
@@ -47,11 +56,16 @@ class EventoController extends Controller
             'online' => 'required|boolean',
 
             'endereco' => 'nullable|min:3|max:50',
-            'cidade' => 'nullable|min:3|max:50',
+            'cidade_id' => 'nullable|in:' . Cidade::pluck('id')->implode(','),
             'cep' => 'nullable|regex:/\d{5}-\d{3}/',
-            'estado' => 'nullable|regex:/[A-Z]{2}/',
-
+            'link' => 'nullable|url',
         ]);
+
+        $cidade = Cidade::find($request->cidade);
+
+        $cidade_nome = $cidade->cidade;
+        $estado = $cidade->estado;
+
 
         $evento = Evento::create([
             'nome' => $request->nome,
@@ -62,9 +76,10 @@ class EventoController extends Controller
             'online' => $request->online,
 
             'endereco' => $request->endereco,
-            'cidade' => $request->cidade,
+            'cidade' => $cidade_nome,
             'cep' => $request->cep,
-            'estado' => $request->estado,
+            'estado' => $estado,
+            'link' => $request->link,
 
         ]);
 
@@ -78,14 +93,15 @@ class EventoController extends Controller
         return response()->json([$response_json], 201);
     }
 
-   #[Response(content: ['data' => ['evento'], 'message' => 'Sucesso!'], status: 200)]
+    #[Group(name: 'Eventos')]
+    #[Response(content: ['data' => ['evento'], 'message' => 'Sucesso!'], status: 200)]
     #[Authenticated]
-    public function show(Evento $evento)
+    public function show(Evento $evento): JsonResponse
     {
         //
         return response()->json([
             'data' => [
-                'evento' => $evento,
+                $evento,
             ],
             'message' => 'Sucesso!'
         ]);
@@ -93,9 +109,10 @@ class EventoController extends Controller
     }
 
 
-    #[Response(content: ['data' => ['evento' => 'Evento'], 'message' => 'Sucesso!'], status: 200)]
+    #[Group(name: 'Eventos')]
+    #[Response(content: ['data' => ['evento'], 'message' => 'Sucesso!'], status: 200)]
     #[Authenticated]
-    public function update(Request $request, Evento $evento)
+    public function update(Request $request, Evento $evento): JsonResponse
     {
         //
         $request->validate([
@@ -107,12 +124,16 @@ class EventoController extends Controller
             'online' => 'required|boolean',
 
             'endereco' => 'nullable|min:3|max:50',
-            'cidade' => 'nullable|min:3|max:50',
+            'cidade_id' => 'nullable|in:' . Cidade::pluck('id')->implode(','),
             'cep' => 'nullable|regex:/\d{5}-\d{3}/',
-            'estado' => 'nullable|regex:/[A-Z]{2}/',
-
+            'link' => 'nullable|url',
 
         ]);
+
+        $cidade = Cidade::find($request->cidade);
+
+        $cidade_nome = $cidade->cidade;
+        $estado = $cidade->estado;
 
         $evento->update([
             'nome' => $request->nome,
@@ -123,14 +144,15 @@ class EventoController extends Controller
             'online' => $request->online,
 
             'endereco' => $request->endereco,
-            'cidade' => $request->cidade,
+            'cidade' => $cidade_nome,
             'cep' => $request->cep,
-            'estado' => $request->estado,
+            'estado' => $estado,
+            'link' => $request->link,
         ]);
 
         $response_json = [
             'data' => [
-                'evento' => $evento,
+                $evento,
             ],
             'message' => 'Sucesso!'
         ];
@@ -138,10 +160,10 @@ class EventoController extends Controller
         return response()->json([$response_json]);
     }
 
-
+    #[Group(name: 'Eventos')]
     #[Response(content: ['message' => 'Sucesso!'], status: 200)]
     #[Authenticated]
-    public function destroy(Evento $evento)
+    public function destroy(Evento $evento): JsonResponse
     {
         $evento->delete();
         return response()->json([

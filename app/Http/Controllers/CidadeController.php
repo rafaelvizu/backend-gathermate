@@ -6,11 +6,13 @@ use App\Models\Cidade;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Knuckles\Scribe\Attributes\Authenticated;
+use Knuckles\Scribe\Attributes\Group;
 use Knuckles\Scribe\Attributes\Response;
 
 class CidadeController extends Controller
 {
 
+    #[Group(name: 'Dicionários')]
     #[Response(content: ['data' => ['evento'], 'message' => 'Sucesso!'], status: 200)]
     #[Authenticated]
     public function index(Request $request): JsonResponse

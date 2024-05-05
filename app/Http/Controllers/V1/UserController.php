@@ -5,6 +5,7 @@ namespace App\Http\Controllers\V1;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Knuckles\Scribe\Attributes\Authenticated;
+use Knuckles\Scribe\Attributes\Group;
 use Knuckles\Scribe\Attributes\Response;
 use Knuckles\Scribe\Attributes\Unauthenticated;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -12,6 +13,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 class UserController extends Controller
 {
 
+    #[Group(name: 'auth')]
     #[Response(content: ['data' => ['user'], 'message' => 'Sucesso!'], status: 200)]
     #[Unauthenticated]
     public function login(Request $request): JsonResponse {
@@ -45,6 +47,7 @@ class UserController extends Controller
         return response()->json(['message' => 'Não autorizado!'], 401);
     }
 
+    #[Group(name: 'auth')]
     #[Response(content: ['message' => 'Logged out'], status: 200)]
     #[Authenticated]
     public function logout(Request $request): JsonResponse {
@@ -53,12 +56,14 @@ class UserController extends Controller
         return response()->json(['message' => 'Logged out'], 200);
     }
 
+    #[Group(name: 'auth')]
     #[Response(content: ['data' => ['user' => 'User'], 'message' => 'Sucesso!'], status: 200)]
     #[Authenticated]
     public function me(Request $request): JsonResponse {
         return response()->json([$request->user()], 200);
     }
 
+    #[Group(name: 'auth')]
     #[Response(content: ['message' => 'Senha alterada!'], status: 200)]
     #[Authenticated]
     public function resetPassword(Request $request): JsonResponse
@@ -80,6 +85,7 @@ class UserController extends Controller
         return response()->json(['message' => 'Senha alterada!'], 200);
     }
 
+    #[Group(name: 'auth')]
     #[Response(content: ['message' => 'Perfil atualizado!'], status: 200)]
     #[Authenticated]
     public function updateProfile(Request $request): JsonResponse {

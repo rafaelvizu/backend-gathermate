@@ -20,6 +20,8 @@ class Evento extends Model
         'cidade',
         'cep',
         'estado',
+        'link',
+        'imagem',
     ];
 
     protected $casts = [

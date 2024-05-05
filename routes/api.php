@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CidadeController;
+use App\Http\Controllers\V1\EventoController;
 use App\Http\Controllers\V1\ManageUser;
 use App\Http\Controllers\V1\UserController;
 use Illuminate\Support\Facades\Route;
@@ -19,7 +20,7 @@ Route::prefix('v1')->group(function () {
             ->name('v1.logout');
 
         Route::get('me', [UserController::class, 'me'])
-            ->middleware('auth:sanctum')
+                ->middleware('auth:sanctum')
             ->name('v1.me');
 
 
@@ -55,8 +56,28 @@ Route::prefix('v1')->group(function () {
 
     });
 
+    Route::middleware(['auth:sanctum'])->prefix('eventos')->group(function () {
+        Route::get('/', [EventoController::class, 'index'])
+            ->name('v1.eventos.index');
+
+        Route::get('/{evento}', [EventoController::class, 'show'])
+            ->name('v1.eventos.show');
+
+        Route::post('/', [EventoController::class, 'store'])
+            ->name('v1.eventos.store');
+
+        Route::put('/{evento}', [EventoController::class, 'update'])
+            ->name('v1.eventos.update');
+
+        Route::delete('/{evento}', [EventoController::class, 'destroy'])
+            ->name('v1.eventos.destroy');
+    });
+
 });
+
 
 Route::fallback(function () {
     return response()->json(['message' => 'Not Found!'], 404);
 })->name('api.fallback.404');
+
+

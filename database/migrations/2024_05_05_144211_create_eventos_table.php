@@ -26,6 +26,10 @@ return new class extends Migration
             $table->text('cep')->nullable();
             $table->text('estado')->nullable();
 
+
+            $table->text('link')->nullable();
+            $table->text('imagem')->nullable();
+
             $table->timestamps();
         });
     }
