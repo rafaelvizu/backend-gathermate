@@ -46,11 +46,11 @@ paths:
                 email:
                   type: string
                   description: 'O campo value deve ser um endereço de e-mail válido.'
-                  example: nbode@example.org
+                  example: kaylah.douglas@example.com
                 password:
                   type: string
                   description: ''
-                  example: corrupti
+                  example: explicabo
               required:
                 - email
                 - password
@@ -136,11 +136,11 @@ paths:
                 password:
                   type: string
                   description: 'O campo value deve ter pelo menos 6 caracteres. O campo value não pode ser superior a 255 caracteres.'
-                  example: 'DH=FeMeEU[9F$G'
+                  example: 'e[&d$<t!q#[hOoDJ'
                 old_password:
                   type: string
                   description: 'O campo value deve ter pelo menos 6 caracteres. O campo value não pode ser superior a 255 caracteres.'
-                  example: knusmt
+                  example: isuhypbsugneyza
               required:
                 - password
                 - old_password
@@ -215,11 +215,11 @@ paths:
                 page:
                   type: integer
                   description: 'O campo value deve ser pelo menos 1.'
-                  example: 74
+                  example: 75
                 per_page:
                   type: integer
                   description: 'O campo value deve ser pelo menos 1. O campo value não pode ser superior a 300.'
-                  example: 16
+                  example: 19
     post:
       summary: ''
       operationId: postApiV1ManageUsers
@@ -258,11 +258,11 @@ paths:
                 name:
                   type: string
                   description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres.'
-                  example: pmlqhrmnsicpoycnywohyuzmr
+                  example: bzuamor
                 email:
                   type: string
                   description: 'O campo value deve ser um endereço de e-mail válido.'
-                  example: boyle.thurman@example.net
+                  example: velma.price@example.org
               required:
                 - name
                 - email
@@ -329,7 +329,7 @@ paths:
                 is_active:
                   type: boolean
                   description: ''
-                  example: false
+                  example: true
               required:
                 - is_active
     parameters:
@@ -337,7 +337,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the user.'
-        example: dolorem
+        example: nobis
         required: true
         schema:
           type: string
@@ -367,7 +367,7 @@ paths:
         in: path
         name: user_id
         description: 'The ID of the user.'
-        example: velit
+        example: harum
         required: true
         schema:
           type: string
