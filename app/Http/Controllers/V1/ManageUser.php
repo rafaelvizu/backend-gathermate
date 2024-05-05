@@ -25,7 +25,12 @@ class ManageUser extends Controller
 
         $users = User::paginate($request->per_page, ['*'], 'page', $request->page);
 
-        return response()->json([$users], 200);
+        return response()->json([
+            'data' => [
+                'user' => $users,
+            ],
+            'message' => 'Sucesso!'
+        ]);
     }
 
     #[Response(content: ['data' => ['user' => 'User'], 'message' => 'Sucesso!'], status: 201)]
@@ -67,7 +72,7 @@ class ManageUser extends Controller
                 'user' => $user,
             ],
             'message' => 'Sucesso!'
-        ], 200);
+        ]);
     }
 
     #[Response(content: ['message' => 'Sucesso!'], status: 200)]
@@ -82,7 +87,7 @@ class ManageUser extends Controller
         $user->is_active = $request->is_active;
         $user->save();
 
-        return response()->json(['message' => 'Sucesso!'], 200);
+        return response()->json(['message' => 'Sucesso!']);
     }
 
     // NEW TEMP PASSWORD
@@ -97,7 +102,7 @@ class ManageUser extends Controller
         Mail::to($user->email)
             ->send(new TempPasswordMail($temp_password, $user->name));
 
-        return response()->json(['message' => 'Sucesso!'], 200);
+        return response()->json(['message' => 'Sucesso!']);
     }
 
 
