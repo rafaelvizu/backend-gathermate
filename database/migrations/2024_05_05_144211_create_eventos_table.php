@@ -19,7 +19,7 @@ return new class extends Migration
             $table->dateTime('data_inicio');
             $table->dateTime('data_fim')->nullable();
 
-            $table->boolean('online')->default(false);
+            $table->text('modalidade');
 
             $table->text('endereco')->nullable();
             $table->text('cidade')->nullable();

@@ -7,6 +7,7 @@ use App\Models\Evento;
 use App\Models\Cidade;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use Knuckles\Scribe\Attributes\Authenticated;
 use Knuckles\Scribe\Attributes\Group;
 use Knuckles\Scribe\Attributes\Response;
@@ -54,8 +55,7 @@ class EventoController extends Controller
             'data_inicio' => 'required|date',
             'data_fim' => 'nullable|date|after:data_inicio',
 
-            'online' => 'required|boolean',
-
+            'modalidade' => 'required|in:presencial,online,hibrido',
             'endereco' => 'nullable|min:3|max:50',
             'cidade_id' => 'nullable|in:' . Cidade::pluck('id')->implode(','),
             'cep' => 'nullable|regex:/\d{5}-\d{3}/',
@@ -74,7 +74,7 @@ class EventoController extends Controller
             'data_inicio' => $request->data_inicio,
             'data_fim' => $request->data_fim,
 
-            'online' => $request->online,
+            'modalidade' => Str::title($request->modalidade),
 
             'endereco' => $request->endereco,
             'cidade' => $cidade_nome,

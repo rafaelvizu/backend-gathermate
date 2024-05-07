@@ -15,7 +15,7 @@ class Evento extends Model
         'descricao',
         'data_inicio',
         'data_fim',
-        'online',
+        'modalidade',
         'endereco',
         'cidade',
         'cep',
@@ -27,6 +27,5 @@ class Evento extends Model
     protected $casts = [
         'data_inicio' => 'datetime',
         'data_fim' => 'datetime',
-        'online' => 'boolean',
     ];
 }
