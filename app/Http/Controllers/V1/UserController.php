@@ -13,7 +13,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 class UserController extends Controller
 {
 
-    #[Group(name: 'auth')]
+    #[Group(name: 'Autenticação')]
     #[Response(content: ['data' => ['user'], 'message' => 'Sucesso!'], status: 200)]
     #[Unauthenticated]
     public function login(Request $request): JsonResponse {
@@ -47,7 +47,7 @@ class UserController extends Controller
         return response()->json(['message' => 'Não autorizado!'], 401);
     }
 
-    #[Group(name: 'auth')]
+    #[Group(name: 'Autenticação')]
     #[Response(content: ['message' => 'Logged out'], status: 200)]
     #[Authenticated]
     public function logout(Request $request): JsonResponse {
@@ -56,14 +56,14 @@ class UserController extends Controller
         return response()->json(['message' => 'Logged out'], 200);
     }
 
-    #[Group(name: 'auth')]
+    #[Group(name: 'Autenticação')]
     #[Response(content: ['data' => ['user' => 'User'], 'message' => 'Sucesso!'], status: 200)]
     #[Authenticated]
     public function me(Request $request): JsonResponse {
         return response()->json([$request->user()], 200);
     }
 
-    #[Group(name: 'auth')]
+    #[Group(name: 'Autenticação')]
     #[Response(content: ['message' => 'Senha alterada!'], status: 200)]
     #[Authenticated]
     public function resetPassword(Request $request): JsonResponse
@@ -85,7 +85,7 @@ class UserController extends Controller
         return response()->json(['message' => 'Senha alterada!'], 200);
     }
 
-    #[Group(name: 'auth')]
+    #[Group(name: 'Autenticação')]
     #[Response(content: ['message' => 'Perfil atualizado!'], status: 200)]
     #[Authenticated]
     public function updateProfile(Request $request): JsonResponse {

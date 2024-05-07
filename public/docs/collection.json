@@ -10,583 +10,13 @@
     ],
     "info": {
         "name": "API Documentation",
-        "_postman_id": "b01e026b-4390-484c-bdf0-d7078185b17d",
+        "_postman_id": "4a82cbdb-c93c-4573-aa61-61dfd638943f",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
     "item": [
         {
-            "name": "Dicion\u00e1rios",
-            "description": "",
-            "item": [
-                {
-                    "name": "GET api\/v1\/dict\/cidades",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/v1\/dict\/cidades",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/v1\/dict\/cidades"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"search\":\"occaecati\",\"per_page\":1,\"page\":16}"
-                        },
-                        "description": ""
-                    },
-                    "response": [
-                        {
-                            "header": [],
-                            "code": 200,
-                            "body": "{\"data\":[\"evento\"],\"message\":\"Sucesso!\"}",
-                            "name": ""
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Eventos",
-            "description": "",
-            "item": [
-                {
-                    "name": "GET api\/v1\/eventos",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/v1\/eventos",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/v1\/eventos"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"page\":20,\"per_page\":11,\"search\":\"ekbibdpvqcs\"}"
-                        },
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [],
-                            "code": 200,
-                            "body": "{\"data\":[\"evento\"],\"message\":\"Sucesso!\",\"current_page\":1,\"per_page\":15,\"total\":1}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "GET api\/v1\/eventos\/{id}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/v1\/eventos\/:id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/v1\/eventos\/:id",
-                            "variable": [
-                                {
-                                    "id": "id",
-                                    "key": "id",
-                                    "value": "quia",
-                                    "description": "The ID of the evento."
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [],
-                            "code": 200,
-                            "body": "{\"data\":[\"evento\"],\"message\":\"Sucesso!\"}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "POST api\/v1\/eventos",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/v1\/eventos",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/v1\/eventos"
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"nome\":\"gzmrdrsae\",\"descricao\":\"tffcnykia\",\"data_inicio\":\"2024-05-07T20:00:45\",\"data_fim\":\"2101-04-25\",\"modalidade\":\"presencial\",\"endereco\":\"zzyddvteult\",\"cep\":\"49995-381\",\"link\":\"http:\\\/\\\/swift.info\\\/doloribus-amet-odit-debitis-iure-sed-praesentium.html\"}"
-                        },
-                        "description": ""
-                    },
-                    "response": [
-                        {
-                            "header": [],
-                            "code": 201,
-                            "body": "{\"data\":[\"evento\"],\"message\":\"Sucesso!\"}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "PUT api\/v1\/eventos\/{id}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/v1\/eventos\/:id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/v1\/eventos\/:id",
-                            "variable": [
-                                {
-                                    "id": "id",
-                                    "key": "id",
-                                    "value": "atque",
-                                    "description": "The ID of the evento."
-                                }
-                            ]
-                        },
-                        "method": "PUT",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"descricao\":\"gvfymknfswibwgp\",\"data_inicio\":\"2024-05-07T20:00:47\",\"data_fim\":\"2036-01-07\",\"online\":true,\"endereco\":\"uvzovddvkzcdkcndzztsqwh\",\"cep\":\"40459-771\",\"link\":\"https:\\\/\\\/www.kertzmann.com\\\/aut-eos-quae-sed\"}"
-                        },
-                        "description": ""
-                    },
-                    "response": [
-                        {
-                            "header": [],
-                            "code": 200,
-                            "body": "{\"data\":[\"evento\"],\"message\":\"Sucesso!\"}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "DELETE api\/v1\/eventos\/{id}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/v1\/eventos\/:id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/v1\/eventos\/:id",
-                            "variable": [
-                                {
-                                    "id": "id",
-                                    "key": "id",
-                                    "value": "repellendus",
-                                    "description": "The ID of the evento."
-                                }
-                            ]
-                        },
-                        "method": "DELETE",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": [
-                        {
-                            "header": [],
-                            "code": 200,
-                            "body": "{\"message\":\"Sucesso!\"}",
-                            "name": ""
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Gerenciar Usu\u00e1rios",
-            "description": "",
-            "item": [
-                {
-                    "name": "GET api\/v1\/manage\/users",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/v1\/manage\/users",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/v1\/manage\/users"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"page\":58,\"per_page\":24,\"search\":\"uycgrrchaqetmgcilnip\"}"
-                        },
-                        "description": ""
-                    },
-                    "response": [
-                        {
-                            "header": [],
-                            "code": 200,
-                            "body": "{\"data\":[\"user\"],\"message\":\"Sucesso!\",\"current_page\":1,\"per_page\":15,\"total\":1}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "GET api\/v1\/manage\/users\/{id}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/v1\/manage\/users\/:id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/v1\/manage\/users\/:id",
-                            "variable": [
-                                {
-                                    "id": "id",
-                                    "key": "id",
-                                    "value": "non",
-                                    "description": "The ID of the user."
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": [
-                        {
-                            "header": [],
-                            "code": 200,
-                            "body": "{\"data\":[\"user\"],\"message\":\"Sucesso!\"}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "POST api\/v1\/manage\/users",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/v1\/manage\/users",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/v1\/manage\/users"
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"name\":\"njcsiapqioawmswlkkim\",\"email\":\"elnora14@example.com\"}"
-                        },
-                        "description": ""
-                    },
-                    "response": [
-                        {
-                            "header": [],
-                            "code": 201,
-                            "body": "{\"data\":{\"user\":\"User\"},\"message\":\"Sucesso!\"}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "PUT api\/v1\/manage\/users\/{id}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/v1\/manage\/users\/:id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/v1\/manage\/users\/:id",
-                            "variable": [
-                                {
-                                    "id": "id",
-                                    "key": "id",
-                                    "value": "maxime",
-                                    "description": "The ID of the user."
-                                }
-                            ]
-                        },
-                        "method": "PUT",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"is_active\":false}"
-                        },
-                        "description": ""
-                    },
-                    "response": [
-                        {
-                            "header": [],
-                            "code": 200,
-                            "body": "{\"message\":\"Sucesso!\"}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "POST api\/v1\/manage\/users\/{user_id}\/new-temp-password",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/v1\/manage\/users\/:user_id\/new-temp-password",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/v1\/manage\/users\/:user_id\/new-temp-password",
-                            "variable": [
-                                {
-                                    "id": "user_id",
-                                    "key": "user_id",
-                                    "value": "delectus",
-                                    "description": "The ID of the user."
-                                }
-                            ]
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": [
-                        {
-                            "header": [],
-                            "code": 200,
-                            "body": "{\"message\":\"Sucesso!\"}",
-                            "name": ""
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "Inscri\u00e7\u00f5es",
-            "description": "",
-            "item": [
-                {
-                    "name": "POST api\/v1\/inscricoes",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/v1\/inscricoes",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/v1\/inscricoes"
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"evento_id\":\"et\",\"nome\":\"tbtstamnawtrbtlcl\",\"cpf\":\"tfexbnew\"}"
-                        },
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [],
-                            "code": 201,
-                            "body": "{\"data\":[\"inscricao\"],\"message\":\"Sucesso!\"}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "GET api\/v1\/inscricoes",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/v1\/inscricoes",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/v1\/inscricoes"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"page\":74,\"per_page\":3,\"search\":\"imiehgotjek\"}"
-                        },
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [],
-                            "code": 200,
-                            "body": "{\"data\":[\"inscricao\"],\"message\":\"Sucesso!\",\"current_page\":1,\"per_page\":15,\"total\":1}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "GET api\/v1\/inscricoes\/{inscricao_id}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/v1\/inscricoes\/:inscricao_id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/v1\/inscricoes\/:inscricao_id",
-                            "variable": [
-                                {
-                                    "id": "inscricao_id",
-                                    "key": "inscricao_id",
-                                    "value": "magni",
-                                    "description": "The ID of the inscricao."
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": [
-                        {
-                            "header": [],
-                            "code": 200,
-                            "body": "{\"data\":[\"inscricao\"],\"message\":\"Sucesso!\"}",
-                            "name": ""
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "auth",
+            "name": "Autentica\u00e7\u00e3o",
             "description": "",
             "item": [
                 {
@@ -611,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"gkrajcik@example.org\",\"password\":\"eos\"}"
+                            "raw": "{\"email\":\"deonte.swaniawski@example.net\",\"password\":\"numquam\"}"
                         },
                         "description": "",
                         "auth": {
@@ -713,7 +143,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"password\":\"QYbHG\\\/eV0qDR\",\"old_password\":\"gwya\"}"
+                            "raw": "{\"password\":\"G<Re-Y-N~Q\",\"old_password\":\"ukzxsjdsemvnw\"}"
                         },
                         "description": ""
                     },
@@ -757,6 +187,570 @@
                             "header": [],
                             "code": 200,
                             "body": "{\"message\":\"Perfil atualizado!\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Dicion\u00e1rios",
+            "description": "",
+            "item": [
+                {
+                    "name": "GET api\/v1\/dict\/cidades",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/dict\/cidades",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/dict\/cidades"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"search\":\"sint\",\"per_page\":8,\"page\":9}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":[\"evento\"],\"message\":\"Sucesso!\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Eventos",
+            "description": "",
+            "item": [
+                {
+                    "name": "GET api\/v1\/eventos",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/eventos",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/eventos"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"page\":36,\"per_page\":14,\"search\":\"pdaarej\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":[\"evento\"],\"message\":\"Sucesso!\",\"current_page\":1,\"per_page\":15,\"total\":1}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/v1\/eventos\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/eventos\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/eventos\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "non",
+                                    "description": "The ID of the evento."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":[\"evento\"],\"message\":\"Sucesso!\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "POST api\/v1\/eventos",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/eventos",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/eventos"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"nome\":\"lworrgdtbqadhdivkwcmwbwa\",\"descricao\":\"igrd\",\"data_inicio\":\"2024-05-07T20:07:08\",\"data_fim\":\"2096-06-13\",\"modalidade\":\"hibrido\",\"endereco\":\"qtgdepswvvqn\",\"cep\":\"48924-395\",\"link\":\"http:\\\/\\\/torphy.biz\\\/\"}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 201,
+                            "body": "{\"data\":[\"evento\"],\"message\":\"Sucesso!\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "PUT api\/v1\/eventos\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/eventos\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/eventos\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "ut",
+                                    "description": "The ID of the evento."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"descricao\":\"hksrlsdh\",\"data_inicio\":\"2024-05-07T20:07:10\",\"data_fim\":\"2095-07-10\",\"online\":true,\"endereco\":\"pfsplnipxtdcdcwlx\",\"cep\":\"57853-757\",\"link\":\"http:\\\/\\\/www.crist.com\\\/\"}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":[\"evento\"],\"message\":\"Sucesso!\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "DELETE api\/v1\/eventos\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/eventos\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/eventos\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "sint",
+                                    "description": "The ID of the evento."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"message\":\"Sucesso!\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Gerenciar Usu\u00e1rios",
+            "description": "",
+            "item": [
+                {
+                    "name": "GET api\/v1\/manage\/users",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/manage\/users",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/manage\/users"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"page\":7,\"per_page\":24,\"search\":\"b\"}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":[\"user\"],\"message\":\"Sucesso!\",\"current_page\":1,\"per_page\":15,\"total\":1}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/v1\/manage\/users\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/manage\/users\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/manage\/users\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "id",
+                                    "description": "The ID of the user."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":[\"user\"],\"message\":\"Sucesso!\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "POST api\/v1\/manage\/users",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/manage\/users",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/manage\/users"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"name\":\"swfrpc\",\"email\":\"jasmin.schiller@example.org\"}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 201,
+                            "body": "{\"data\":{\"user\":\"User\"},\"message\":\"Sucesso!\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "PUT api\/v1\/manage\/users\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/manage\/users\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/manage\/users\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "maxime",
+                                    "description": "The ID of the user."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"is_active\":true}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"message\":\"Sucesso!\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "POST api\/v1\/manage\/users\/{user_id}\/new-temp-password",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/manage\/users\/:user_id\/new-temp-password",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/manage\/users\/:user_id\/new-temp-password",
+                            "variable": [
+                                {
+                                    "id": "user_id",
+                                    "key": "user_id",
+                                    "value": "et",
+                                    "description": "The ID of the user."
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"message\":\"Sucesso!\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Inscri\u00e7\u00f5es",
+            "description": "",
+            "item": [
+                {
+                    "name": "POST api\/v1\/inscricoes",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/inscricoes",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/inscricoes"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"evento_id\":\"est\",\"nome\":\"hrkvmpifejockpx\",\"cpf\":\"ejspvml\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 201,
+                            "body": "{\"data\":[\"inscricao\"],\"message\":\"Sucesso!\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/v1\/inscricoes",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/inscricoes",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/inscricoes"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"page\":65,\"per_page\":14,\"search\":\"ew\"}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":[\"inscricao\"],\"message\":\"Sucesso!\",\"current_page\":1,\"per_page\":15,\"total\":1}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/v1\/inscricoes\/{inscricao_id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/inscricoes\/:inscricao_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/inscricoes\/:inscricao_id",
+                            "variable": [
+                                {
+                                    "id": "inscricao_id",
+                                    "key": "inscricao_id",
+                                    "value": "minus",
+                                    "description": "The ID of the inscricao."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":[\"inscricao\"],\"message\":\"Sucesso!\"}",
                             "name": ""
                         }
                     ]

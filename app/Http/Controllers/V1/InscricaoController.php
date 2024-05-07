@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Inscricao;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Knuckles\Scribe\Attributes\Authenticated;
 use Knuckles\Scribe\Attributes\Group;
 use Knuckles\Scribe\Attributes\Response;
 use Knuckles\Scribe\Attributes\Unauthenticated;
@@ -15,7 +16,7 @@ class InscricaoController extends Controller
 
     #[Group(name: 'Inscrições')]
     #[Response(content: ['data' => ['inscricao'], 'message' => 'Sucesso!', 'current_page' => 1, 'per_page' => 15, 'total' => 1], status: 200)]
-    #[Unauthenticated]
+    #[Authenticated]
     public function index(Request $request): JsonResponse
     {
         //
@@ -71,7 +72,7 @@ class InscricaoController extends Controller
 
     #[Group(name: 'Inscrições')]
     #[Response(content: ['data' => ['inscricao'], 'message' => 'Sucesso!'], status: 200)]
-    #[Unauthenticated]
+    #[Authenticated]
     public function show(Inscricao $inscricao): JsonResponse
     {
         //

@@ -7,6 +7,175 @@ servers:
   -
     url: 'https://test.datime.com.br'
 paths:
+  /api/v1/auth/login:
+    post:
+      summary: ''
+      operationId: postApiV1AuthLogin
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    - user
+                  message: Sucesso!
+                properties:
+                  data:
+                    type: array
+                    example:
+                      - user
+                    items:
+                      type: string
+                  message:
+                    type: string
+                    example: Sucesso!
+      tags:
+        - Autenticação
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: 'O campo value deve ser um endereço de e-mail válido.'
+                  example: deonte.swaniawski@example.net
+                password:
+                  type: string
+                  description: ''
+                  example: numquam
+              required:
+                - email
+                - password
+      security: []
+  /api/v1/auth/logout:
+    post:
+      summary: ''
+      operationId: postApiV1AuthLogout
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Logged out'
+                properties:
+                  message:
+                    type: string
+                    example: 'Logged out'
+      tags:
+        - Autenticação
+  /api/v1/auth/me:
+    get:
+      summary: ''
+      operationId: getApiV1AuthMe
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    user: User
+                  message: Sucesso!
+                properties:
+                  data:
+                    type: object
+                    properties:
+                      user:
+                        type: string
+                        example: User
+                  message:
+                    type: string
+                    example: Sucesso!
+      tags:
+        - Autenticação
+  /api/v1/auth/reset-password:
+    post:
+      summary: ''
+      operationId: postApiV1AuthResetPassword
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Senha alterada!'
+                properties:
+                  message:
+                    type: string
+                    example: 'Senha alterada!'
+      tags:
+        - Autenticação
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                password:
+                  type: string
+                  description: 'O campo value deve ter pelo menos 6 caracteres. O campo value não pode ser superior a 255 caracteres.'
+                  example: G<Re-Y-N~Q
+                old_password:
+                  type: string
+                  description: 'O campo value deve ter pelo menos 6 caracteres. O campo value não pode ser superior a 255 caracteres.'
+                  example: ukzxsjdsemvnw
+              required:
+                - password
+                - old_password
+  /api/v1/auth/updateProfile:
+    post:
+      summary: ''
+      operationId: postApiV1AuthUpdateProfile
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Perfil atualizado!'
+                properties:
+                  message:
+                    type: string
+                    example: 'Perfil atualizado!'
+      tags:
+        - Autenticação
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: null
   /api/v1/dict/cidades:
     get:
       summary: ''
@@ -46,15 +215,15 @@ paths:
                 search:
                   type: string
                   description: ''
-                  example: occaecati
+                  example: sint
                 per_page:
                   type: integer
                   description: ''
-                  example: 1
+                  example: 8
                 page:
                   type: integer
                   description: ''
-                  example: 16
+                  example: 9
   /api/v1/eventos:
     get:
       summary: ''
@@ -106,15 +275,15 @@ paths:
                 page:
                   type: integer
                   description: 'O campo value deve ser pelo menos 1.'
-                  example: 20
+                  example: 36
                 per_page:
                   type: integer
                   description: 'O campo value deve ser pelo menos 1. O campo value não pode ser superior a 300.'
-                  example: 11
+                  example: 14
                 search:
                   type: string
                   description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres.'
-                  example: ekbibdpvqcs
+                  example: pdaarej
       security: []
     post:
       summary: ''
@@ -154,23 +323,23 @@ paths:
                 nome:
                   type: string
                   description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres.'
-                  example: gzmrdrsae
+                  example: lworrgdtbqadhdivkwcmwbwa
                 descricao:
                   type: string
                   description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres.'
-                  example: tffcnykia
+                  example: igrd
                 data_inicio:
                   type: string
                   description: 'O campo value não é uma data válida.'
-                  example: '2024-05-07T20:00:45'
+                  example: '2024-05-07T20:07:08'
                 data_fim:
                   type: string
                   description: 'O campo value não é uma data válida. O campo value deve ser uma data posterior a <code>data_inicio</code>.'
-                  example: '2101-04-25'
+                  example: '2096-06-13'
                 modalidade:
                   type: string
                   description: ''
-                  example: presencial
+                  example: hibrido
                   enum:
                     - presencial
                     - online
@@ -178,7 +347,7 @@ paths:
                 endereco:
                   type: string
                   description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres.'
-                  example: zzyddvteult
+                  example: qtgdepswvvqn
                 cidade_id:
                   type: string
                   description: ''
@@ -186,11 +355,11 @@ paths:
                 cep:
                   type: string
                   description: 'Must match the regex /\d{5}-\d{3}/.'
-                  example: 49995-381
+                  example: 48924-395
                 link:
                   type: string
                   description: 'Must be a valid URL.'
-                  example: 'http://swift.info/doloribus-amet-odit-debitis-iure-sed-praesentium.html'
+                  example: 'http://torphy.biz/'
               required:
                 - nome
                 - descricao
@@ -268,15 +437,15 @@ paths:
                 descricao:
                   type: string
                   description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres.'
-                  example: gvfymknfswibwgp
+                  example: hksrlsdh
                 data_inicio:
                   type: string
                   description: 'O campo value não é uma data válida.'
-                  example: '2024-05-07T20:00:47'
+                  example: '2024-05-07T20:07:10'
                 data_fim:
                   type: string
                   description: 'O campo value não é uma data válida. O campo value deve ser uma data posterior a <code>data_inicio</code>.'
-                  example: '2036-01-07'
+                  example: '2095-07-10'
                 online:
                   type: boolean
                   description: ''
@@ -284,7 +453,7 @@ paths:
                 endereco:
                   type: string
                   description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres.'
-                  example: uvzovddvkzcdkcndzztsqwh
+                  example: pfsplnipxtdcdcwlx
                 cidade_id:
                   type: string
                   description: ''
@@ -292,11 +461,11 @@ paths:
                 cep:
                   type: string
                   description: 'Must match the regex /\d{5}-\d{3}/.'
-                  example: 40459-771
+                  example: 57853-757
                 link:
                   type: string
                   description: 'Must be a valid URL.'
-                  example: 'https://www.kertzmann.com/aut-eos-quae-sed'
+                  example: 'http://www.crist.com/'
               required:
                 - descricao
                 - data_inicio
@@ -326,7 +495,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the evento.'
-        example: quia
+        example: non
         required: true
         schema:
           type: string
@@ -381,7 +550,7 @@ paths:
                 page:
                   type: integer
                   description: 'O campo value deve ser pelo menos 1.'
-                  example: 58
+                  example: 7
                 per_page:
                   type: integer
                   description: 'O campo value deve ser pelo menos 1. O campo value não pode ser superior a 300.'
@@ -389,7 +558,7 @@ paths:
                 search:
                   type: string
                   description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres.'
-                  example: uycgrrchaqetmgcilnip
+                  example: b
     post:
       summary: ''
       operationId: postApiV1ManageUsers
@@ -428,11 +597,11 @@ paths:
                 name:
                   type: string
                   description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres.'
-                  example: njcsiapqioawmswlkkim
+                  example: swfrpc
                 email:
                   type: string
                   description: 'O campo value deve ser um endereço de e-mail válido.'
-                  example: elnora14@example.com
+                  example: jasmin.schiller@example.org
               required:
                 - name
                 - email
@@ -499,7 +668,7 @@ paths:
                 is_active:
                   type: boolean
                   description: ''
-                  example: false
+                  example: true
               required:
                 - is_active
     parameters:
@@ -507,7 +676,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the user.'
-        example: non
+        example: id
         required: true
         schema:
           type: string
@@ -537,7 +706,7 @@ paths:
         in: path
         name: user_id
         description: 'The ID of the user.'
-        example: delectus
+        example: et
         required: true
         schema:
           type: string
@@ -580,11 +749,11 @@ paths:
                 evento_id:
                   type: string
                   description: ''
-                  example: et
+                  example: est
                 nome:
                   type: string
                   description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres.'
-                  example: tbtstamnawtrbtlcl
+                  example: hrkvmpifejockpx
                 email:
                   type: string
                   description: ''
@@ -592,7 +761,7 @@ paths:
                 cpf:
                   type: string
                   description: 'O campo value deve ter pelo menos 11 caracteres. O campo value não pode ser superior a 14 caracteres.'
-                  example: tfexbnew
+                  example: ejspvml
               required:
                 - evento_id
                 - nome
@@ -648,16 +817,15 @@ paths:
                 page:
                   type: integer
                   description: 'O campo value deve ser pelo menos 1.'
-                  example: 74
+                  example: 65
                 per_page:
                   type: integer
                   description: 'O campo value deve ser pelo menos 1. O campo value não pode ser superior a 300.'
-                  example: 3
+                  example: 14
                 search:
                   type: string
                   description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres.'
-                  example: imiehgotjek
-      security: []
+                  example: ew
   '/api/v1/inscricoes/{inscricao_id}':
     get:
       summary: ''
@@ -687,186 +855,19 @@ paths:
                     example: Sucesso!
       tags:
         - Inscrições
-      security: []
     parameters:
       -
         in: path
         name: inscricao_id
         description: 'The ID of the inscricao.'
-        example: magni
+        example: minus
         required: true
         schema:
           type: string
-  /api/v1/auth/login:
-    post:
-      summary: ''
-      operationId: postApiV1AuthLogin
-      description: ''
-      parameters: []
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  data:
-                    - user
-                  message: Sucesso!
-                properties:
-                  data:
-                    type: array
-                    example:
-                      - user
-                    items:
-                      type: string
-                  message:
-                    type: string
-                    example: Sucesso!
-      tags:
-        - auth
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                email:
-                  type: string
-                  description: 'O campo value deve ser um endereço de e-mail válido.'
-                  example: gkrajcik@example.org
-                password:
-                  type: string
-                  description: ''
-                  example: eos
-              required:
-                - email
-                - password
-      security: []
-  /api/v1/auth/logout:
-    post:
-      summary: ''
-      operationId: postApiV1AuthLogout
-      description: ''
-      parameters: []
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: 'Logged out'
-                properties:
-                  message:
-                    type: string
-                    example: 'Logged out'
-      tags:
-        - auth
-  /api/v1/auth/me:
-    get:
-      summary: ''
-      operationId: getApiV1AuthMe
-      description: ''
-      parameters: []
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  data:
-                    user: User
-                  message: Sucesso!
-                properties:
-                  data:
-                    type: object
-                    properties:
-                      user:
-                        type: string
-                        example: User
-                  message:
-                    type: string
-                    example: Sucesso!
-      tags:
-        - auth
-  /api/v1/auth/reset-password:
-    post:
-      summary: ''
-      operationId: postApiV1AuthResetPassword
-      description: ''
-      parameters: []
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: 'Senha alterada!'
-                properties:
-                  message:
-                    type: string
-                    example: 'Senha alterada!'
-      tags:
-        - auth
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                password:
-                  type: string
-                  description: 'O campo value deve ter pelo menos 6 caracteres. O campo value não pode ser superior a 255 caracteres.'
-                  example: QYbHG/eV0qDR
-                old_password:
-                  type: string
-                  description: 'O campo value deve ter pelo menos 6 caracteres. O campo value não pode ser superior a 255 caracteres.'
-                  example: gwya
-              required:
-                - password
-                - old_password
-  /api/v1/auth/updateProfile:
-    post:
-      summary: ''
-      operationId: postApiV1AuthUpdateProfile
-      description: ''
-      parameters: []
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: 'Perfil atualizado!'
-                properties:
-                  message:
-                    type: string
-                    example: 'Perfil atualizado!'
-      tags:
-        - auth
-      requestBody:
-        required: false
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                name:
-                  type: string
-                  description: ''
-                  example: null
 tags:
+  -
+    name: Autenticação
+    description: ''
   -
     name: Dicionários
     description: ''
@@ -878,9 +879,6 @@ tags:
     description: ''
   -
     name: Inscrições
-    description: ''
-  -
-    name: auth
     description: ''
 components:
   securitySchemes:
