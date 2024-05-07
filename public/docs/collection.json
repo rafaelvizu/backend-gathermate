@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "API Documentation",
-        "_postman_id": "8f427fbf-b8a0-4335-975c-04398de68600",
+        "_postman_id": "b01e026b-4390-484c-bdf0-d7078185b17d",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"search\":\"aut\",\"per_page\":13,\"page\":19}"
+                            "raw": "{\"search\":\"occaecati\",\"per_page\":1,\"page\":16}"
                         },
                         "description": ""
                     },
@@ -82,9 +82,12 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"page\":81,\"per_page\":16,\"search\":\"oitkxzhwrjimepypthux\"}"
+                            "raw": "{\"page\":20,\"per_page\":11,\"search\":\"ekbibdpvqcs\"}"
                         },
-                        "description": ""
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
                     },
                     "response": [
                         {
@@ -107,7 +110,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "accusamus",
+                                    "value": "quia",
                                     "description": "The ID of the evento."
                                 }
                             ]
@@ -124,7 +127,10 @@
                             }
                         ],
                         "body": null,
-                        "description": ""
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
                     },
                     "response": [
                         {
@@ -157,7 +163,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"nome\":\"eztndaulmm\",\"descricao\":\"itmewewkilrqclvcblhhn\",\"data_inicio\":\"2024-05-05T18:44:26\",\"data_fim\":\"2095-11-07\",\"online\":false,\"endereco\":\"mwlukxqcqji\",\"cep\":\"90509-971\",\"link\":\"http:\\\/\\\/www.zboncak.org\\\/reprehenderit-porro-fugit-et-fugit-harum\"}"
+                            "raw": "{\"nome\":\"gzmrdrsae\",\"descricao\":\"tffcnykia\",\"data_inicio\":\"2024-05-07T20:00:45\",\"data_fim\":\"2101-04-25\",\"modalidade\":\"presencial\",\"endereco\":\"zzyddvteult\",\"cep\":\"49995-381\",\"link\":\"http:\\\/\\\/swift.info\\\/doloribus-amet-odit-debitis-iure-sed-praesentium.html\"}"
                         },
                         "description": ""
                     },
@@ -182,7 +188,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "omnis",
+                                    "value": "atque",
                                     "description": "The ID of the evento."
                                 }
                             ]
@@ -200,7 +206,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"descricao\":\"lihtjcvtcxy\",\"data_inicio\":\"2024-05-05T18:44:26\",\"data_fim\":\"2105-08-22\",\"online\":false,\"endereco\":\"argwfzkfdybaphkxw\",\"cep\":\"53861-181\",\"link\":\"http:\\\/\\\/hoeger.com\\\/aut-voluptas-quod-fuga.html\"}"
+                            "raw": "{\"descricao\":\"gvfymknfswibwgp\",\"data_inicio\":\"2024-05-07T20:00:47\",\"data_fim\":\"2036-01-07\",\"online\":true,\"endereco\":\"uvzovddvkzcdkcndzztsqwh\",\"cep\":\"40459-771\",\"link\":\"https:\\\/\\\/www.kertzmann.com\\\/aut-eos-quae-sed\"}"
                         },
                         "description": ""
                     },
@@ -225,7 +231,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "sint",
+                                    "value": "repellendus",
                                     "description": "The ID of the evento."
                                 }
                             ]
@@ -281,7 +287,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"page\":16,\"per_page\":10,\"search\":\"znsjruybnae\"}"
+                            "raw": "{\"page\":58,\"per_page\":24,\"search\":\"uycgrrchaqetmgcilnip\"}"
                         },
                         "description": ""
                     },
@@ -306,7 +312,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "9bf907da-e867-49a1-9466-462ff661d61e",
+                                    "value": "non",
                                     "description": "The ID of the user."
                                 }
                             ]
@@ -356,7 +362,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"aawouuzrjrcuytkkrrinvkpnp\",\"email\":\"williamson.felicita@example.com\"}"
+                            "raw": "{\"name\":\"njcsiapqioawmswlkkim\",\"email\":\"elnora14@example.com\"}"
                         },
                         "description": ""
                     },
@@ -381,7 +387,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "9bf907da-e867-49a1-9466-462ff661d61e",
+                                    "value": "maxime",
                                     "description": "The ID of the user."
                                 }
                             ]
@@ -399,7 +405,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"is_active\":true}"
+                            "raw": "{\"is_active\":false}"
                         },
                         "description": ""
                     },
@@ -424,7 +430,7 @@
                                 {
                                     "id": "user_id",
                                     "key": "user_id",
-                                    "value": "9bf907da-e867-49a1-9466-462ff661d61e",
+                                    "value": "delectus",
                                     "description": "The ID of the user."
                                 }
                             ]
@@ -448,6 +454,131 @@
                             "header": [],
                             "code": 200,
                             "body": "{\"message\":\"Sucesso!\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Inscri\u00e7\u00f5es",
+            "description": "",
+            "item": [
+                {
+                    "name": "POST api\/v1\/inscricoes",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/inscricoes",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/inscricoes"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"evento_id\":\"et\",\"nome\":\"tbtstamnawtrbtlcl\",\"cpf\":\"tfexbnew\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 201,
+                            "body": "{\"data\":[\"inscricao\"],\"message\":\"Sucesso!\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/v1\/inscricoes",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/inscricoes",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/inscricoes"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"page\":74,\"per_page\":3,\"search\":\"imiehgotjek\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":[\"inscricao\"],\"message\":\"Sucesso!\",\"current_page\":1,\"per_page\":15,\"total\":1}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/v1\/inscricoes\/{inscricao_id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/inscricoes\/:inscricao_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/inscricoes\/:inscricao_id",
+                            "variable": [
+                                {
+                                    "id": "inscricao_id",
+                                    "key": "inscricao_id",
+                                    "value": "magni",
+                                    "description": "The ID of the inscricao."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":[\"inscricao\"],\"message\":\"Sucesso!\"}",
                             "name": ""
                         }
                     ]
@@ -480,7 +611,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"jokeefe@example.org\",\"password\":\"magnam\"}"
+                            "raw": "{\"email\":\"gkrajcik@example.org\",\"password\":\"eos\"}"
                         },
                         "description": "",
                         "auth": {
@@ -582,7 +713,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"password\":\")|0ED'>mchp)yNx`<#Bk\",\"old_password\":\"xm\"}"
+                            "raw": "{\"password\":\"QYbHG\\\/eV0qDR\",\"old_password\":\"gwya\"}"
                         },
                         "description": ""
                     },

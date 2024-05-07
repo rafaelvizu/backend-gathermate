@@ -46,15 +46,15 @@ paths:
                 search:
                   type: string
                   description: ''
-                  example: aut
+                  example: occaecati
                 per_page:
                   type: integer
                   description: ''
-                  example: 13
+                  example: 1
                 page:
                   type: integer
                   description: ''
-                  example: 19
+                  example: 16
   /api/v1/eventos:
     get:
       summary: ''
@@ -106,15 +106,16 @@ paths:
                 page:
                   type: integer
                   description: 'O campo value deve ser pelo menos 1.'
-                  example: 81
+                  example: 20
                 per_page:
                   type: integer
                   description: 'O campo value deve ser pelo menos 1. O campo value não pode ser superior a 300.'
-                  example: 16
+                  example: 11
                 search:
                   type: string
                   description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres.'
-                  example: oitkxzhwrjimepypthux
+                  example: ekbibdpvqcs
+      security: []
     post:
       summary: ''
       operationId: postApiV1Eventos
@@ -153,27 +154,31 @@ paths:
                 nome:
                   type: string
                   description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres.'
-                  example: eztndaulmm
+                  example: gzmrdrsae
                 descricao:
                   type: string
                   description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres.'
-                  example: itmewewkilrqclvcblhhn
+                  example: tffcnykia
                 data_inicio:
                   type: string
                   description: 'O campo value não é uma data válida.'
-                  example: '2024-05-05T18:44:26'
+                  example: '2024-05-07T20:00:45'
                 data_fim:
                   type: string
                   description: 'O campo value não é uma data válida. O campo value deve ser uma data posterior a <code>data_inicio</code>.'
-                  example: '2095-11-07'
-                online:
-                  type: boolean
+                  example: '2101-04-25'
+                modalidade:
+                  type: string
                   description: ''
-                  example: false
+                  example: presencial
+                  enum:
+                    - presencial
+                    - online
+                    - hibrido
                 endereco:
                   type: string
                   description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres.'
-                  example: mwlukxqcqji
+                  example: zzyddvteult
                 cidade_id:
                   type: string
                   description: ''
@@ -181,16 +186,16 @@ paths:
                 cep:
                   type: string
                   description: 'Must match the regex /\d{5}-\d{3}/.'
-                  example: 90509-971
+                  example: 49995-381
                 link:
                   type: string
                   description: 'Must be a valid URL.'
-                  example: 'http://www.zboncak.org/reprehenderit-porro-fugit-et-fugit-harum'
+                  example: 'http://swift.info/doloribus-amet-odit-debitis-iure-sed-praesentium.html'
               required:
                 - nome
                 - descricao
                 - data_inicio
-                - online
+                - modalidade
   '/api/v1/eventos/{id}':
     get:
       summary: ''
@@ -220,6 +225,7 @@ paths:
                     example: Sucesso!
       tags:
         - Eventos
+      security: []
     put:
       summary: ''
       operationId: putApiV1EventosId
@@ -262,23 +268,23 @@ paths:
                 descricao:
                   type: string
                   description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres.'
-                  example: lihtjcvtcxy
+                  example: gvfymknfswibwgp
                 data_inicio:
                   type: string
                   description: 'O campo value não é uma data válida.'
-                  example: '2024-05-05T18:44:26'
+                  example: '2024-05-07T20:00:47'
                 data_fim:
                   type: string
                   description: 'O campo value não é uma data válida. O campo value deve ser uma data posterior a <code>data_inicio</code>.'
-                  example: '2105-08-22'
+                  example: '2036-01-07'
                 online:
                   type: boolean
                   description: ''
-                  example: false
+                  example: true
                 endereco:
                   type: string
                   description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres.'
-                  example: argwfzkfdybaphkxw
+                  example: uvzovddvkzcdkcndzztsqwh
                 cidade_id:
                   type: string
                   description: ''
@@ -286,11 +292,11 @@ paths:
                 cep:
                   type: string
                   description: 'Must match the regex /\d{5}-\d{3}/.'
-                  example: 53861-181
+                  example: 40459-771
                 link:
                   type: string
                   description: 'Must be a valid URL.'
-                  example: 'http://hoeger.com/aut-voluptas-quod-fuga.html'
+                  example: 'https://www.kertzmann.com/aut-eos-quae-sed'
               required:
                 - descricao
                 - data_inicio
@@ -320,7 +326,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the evento.'
-        example: accusamus
+        example: quia
         required: true
         schema:
           type: string
@@ -375,15 +381,15 @@ paths:
                 page:
                   type: integer
                   description: 'O campo value deve ser pelo menos 1.'
-                  example: 16
+                  example: 58
                 per_page:
                   type: integer
                   description: 'O campo value deve ser pelo menos 1. O campo value não pode ser superior a 300.'
-                  example: 10
+                  example: 24
                 search:
                   type: string
                   description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres.'
-                  example: znsjruybnae
+                  example: uycgrrchaqetmgcilnip
     post:
       summary: ''
       operationId: postApiV1ManageUsers
@@ -422,11 +428,11 @@ paths:
                 name:
                   type: string
                   description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres.'
-                  example: aawouuzrjrcuytkkrrinvkpnp
+                  example: njcsiapqioawmswlkkim
                 email:
                   type: string
                   description: 'O campo value deve ser um endereço de e-mail válido.'
-                  example: williamson.felicita@example.com
+                  example: elnora14@example.com
               required:
                 - name
                 - email
@@ -493,7 +499,7 @@ paths:
                 is_active:
                   type: boolean
                   description: ''
-                  example: true
+                  example: false
               required:
                 - is_active
     parameters:
@@ -501,7 +507,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the user.'
-        example: 9bf907da-e867-49a1-9466-462ff661d61e
+        example: non
         required: true
         schema:
           type: string
@@ -531,7 +537,163 @@ paths:
         in: path
         name: user_id
         description: 'The ID of the user.'
-        example: 9bf907da-e867-49a1-9466-462ff661d61e
+        example: delectus
+        required: true
+        schema:
+          type: string
+  /api/v1/inscricoes:
+    post:
+      summary: ''
+      operationId: postApiV1Inscricoes
+      description: ''
+      parameters: []
+      responses:
+        201:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    - inscricao
+                  message: Sucesso!
+                properties:
+                  data:
+                    type: array
+                    example:
+                      - inscricao
+                    items:
+                      type: string
+                  message:
+                    type: string
+                    example: Sucesso!
+      tags:
+        - Inscrições
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                evento_id:
+                  type: string
+                  description: ''
+                  example: et
+                nome:
+                  type: string
+                  description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres.'
+                  example: tbtstamnawtrbtlcl
+                email:
+                  type: string
+                  description: ''
+                  example: null
+                cpf:
+                  type: string
+                  description: 'O campo value deve ter pelo menos 11 caracteres. O campo value não pode ser superior a 14 caracteres.'
+                  example: tfexbnew
+              required:
+                - evento_id
+                - nome
+                - cpf
+      security: []
+    get:
+      summary: ''
+      operationId: getApiV1Inscricoes
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    - inscricao
+                  message: Sucesso!
+                  current_page: 1
+                  per_page: 15
+                  total: 1
+                properties:
+                  data:
+                    type: array
+                    example:
+                      - inscricao
+                    items:
+                      type: string
+                  message:
+                    type: string
+                    example: Sucesso!
+                  current_page:
+                    type: integer
+                    example: 1
+                  per_page:
+                    type: integer
+                    example: 15
+                  total:
+                    type: integer
+                    example: 1
+      tags:
+        - Inscrições
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                page:
+                  type: integer
+                  description: 'O campo value deve ser pelo menos 1.'
+                  example: 74
+                per_page:
+                  type: integer
+                  description: 'O campo value deve ser pelo menos 1. O campo value não pode ser superior a 300.'
+                  example: 3
+                search:
+                  type: string
+                  description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres.'
+                  example: imiehgotjek
+      security: []
+  '/api/v1/inscricoes/{inscricao_id}':
+    get:
+      summary: ''
+      operationId: getApiV1InscricoesInscricao_id
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    - inscricao
+                  message: Sucesso!
+                properties:
+                  data:
+                    type: array
+                    example:
+                      - inscricao
+                    items:
+                      type: string
+                  message:
+                    type: string
+                    example: Sucesso!
+      tags:
+        - Inscrições
+      security: []
+    parameters:
+      -
+        in: path
+        name: inscricao_id
+        description: 'The ID of the inscricao.'
+        example: magni
         required: true
         schema:
           type: string
@@ -574,11 +736,11 @@ paths:
                 email:
                   type: string
                   description: 'O campo value deve ser um endereço de e-mail válido.'
-                  example: jokeefe@example.org
+                  example: gkrajcik@example.org
                 password:
                   type: string
                   description: ''
-                  example: magnam
+                  example: eos
               required:
                 - email
                 - password
@@ -664,11 +826,11 @@ paths:
                 password:
                   type: string
                   description: 'O campo value deve ter pelo menos 6 caracteres. O campo value não pode ser superior a 255 caracteres.'
-                  example: ")|0ED'>mchp)yNx`<#Bk"
+                  example: QYbHG/eV0qDR
                 old_password:
                   type: string
                   description: 'O campo value deve ter pelo menos 6 caracteres. O campo value não pode ser superior a 255 caracteres.'
-                  example: xm
+                  example: gwya
               required:
                 - password
                 - old_password
@@ -713,6 +875,9 @@ tags:
     description: ''
   -
     name: 'Gerenciar Usuários'
+    description: ''
+  -
+    name: Inscrições
     description: ''
   -
     name: auth

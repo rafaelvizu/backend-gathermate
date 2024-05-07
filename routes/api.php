@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CidadeController;
 use App\Http\Controllers\V1\EventoController;
+use App\Http\Controllers\V1\InscricaoController;
 use App\Http\Controllers\V1\ManageUser;
 use App\Http\Controllers\V1\UserController;
 use Illuminate\Support\Facades\Route;
@@ -74,6 +75,21 @@ Route::prefix('v1')->group(function () {
                 ->name('v1.eventos.destroy');
         });
     });
+
+    Route::prefix('inscricoes')->group(function () {
+        Route::post('/', [InscricaoController::class, 'store'])
+            ->name('v1.inscricoes.store');
+
+        Route::middleware('auth:sanctum')->group(function () {
+            Route::get('/', [InscricaoController::class, 'index'])
+              ->name('v1.inscricoes.index');
+
+            Route::get('/{inscricao}', [InscricaoController::class, 'show'])
+              ->name('v1.inscricoes.show');
+        });
+    });
+
+
 
 });
 

@@ -30,7 +30,9 @@ class EventoController extends Controller
 
         $eventos = Evento::when($request->search, function ($query, $search) {
             return $query->where('nome', 'like', "%$search%");
-        })->paginate($request->per_page, ['*'], 'page', $request->page);
+        })
+        ->withCount('inscricoes')
+        ->paginate($request->per_page, ['*'], 'page', $request->page);
 
         return response()->json([
             'data' => $eventos->items(),
