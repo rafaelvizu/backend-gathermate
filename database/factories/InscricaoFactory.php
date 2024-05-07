@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Evento;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -16,8 +17,12 @@ class InscricaoFactory extends Factory
      */
     public function definition(): array
     {
+        // evento de for
         return [
-            //
+            'evento_id' => Evento::all()->random()->id,
+            'nome' => $this->faker->word,
+            'email' => $this->faker->unique()->safeEmail,
+            'cpf' => '000.000.000-00'
         ];
     }
 }
