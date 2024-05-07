@@ -56,21 +56,23 @@ Route::prefix('v1')->group(function () {
 
     });
 
-    Route::middleware(['auth:sanctum'])->prefix('eventos')->group(function () {
+    Route::prefix('eventos')->group(function () {
         Route::get('/', [EventoController::class, 'index'])
             ->name('v1.eventos.index');
 
         Route::get('/{evento}', [EventoController::class, 'show'])
             ->name('v1.eventos.show');
 
-        Route::post('/', [EventoController::class, 'store'])
-            ->name('v1.eventos.store');
+        Route::middleware(['auth:sanctum', 'can:admin'])->group(function () {
+            Route::post('/', [EventoController::class, 'store'])
+                ->name('v1.eventos.store');
 
-        Route::put('/{evento}', [EventoController::class, 'update'])
-            ->name('v1.eventos.update');
+            Route::put('/{evento}', [EventoController::class, 'update'])
+                ->name('v1.eventos.update');
 
-        Route::delete('/{evento}', [EventoController::class, 'destroy'])
-            ->name('v1.eventos.destroy');
+            Route::delete('/{evento}', [EventoController::class, 'destroy'])
+                ->name('v1.eventos.destroy');
+        });
     });
 
 });

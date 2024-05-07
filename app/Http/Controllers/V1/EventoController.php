@@ -10,13 +10,14 @@ use Illuminate\Http\Request;
 use Knuckles\Scribe\Attributes\Authenticated;
 use Knuckles\Scribe\Attributes\Group;
 use Knuckles\Scribe\Attributes\Response;
+use Knuckles\Scribe\Attributes\Unauthenticated;
 
 class EventoController extends Controller
 {
 
     #[Group(name: 'Eventos')]
     #[Response(content: ['data' => ['evento'], 'message' => 'Sucesso!', 'current_page' => 1, 'per_page' => 15, 'total' => 1], status: 200)]
-    #[Authenticated]
+    #[Unauthenticated]
     public function index(Request $request): JsonResponse
     {
         //
@@ -95,7 +96,7 @@ class EventoController extends Controller
 
     #[Group(name: 'Eventos')]
     #[Response(content: ['data' => ['evento'], 'message' => 'Sucesso!'], status: 200)]
-    #[Authenticated]
+    #[Unauthenticated]
     public function show(Evento $evento): JsonResponse
     {
         //
