@@ -18,6 +18,8 @@ return new class extends Migration
             $table->decimal('valor_unidade', 10, 2);
             $table->unsignedInteger('quantidade');
             $table->decimal('valor_total',10,2);
+            $table->decimal('valor_pago', 10, 2);
+            $table->boolean('pago');
 
             $table->foreignUuid('categoria_id')
                 ->constrained('categorias')

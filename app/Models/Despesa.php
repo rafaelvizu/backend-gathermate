@@ -15,13 +15,16 @@ class Despesa extends Model
         'valor_unidade',
         'quantidade',
         'valor_total',
+        'valor_pago',
+        'pago',
         'categoria_id',
-        'evento_id'
+        'evento_id',
     ];
 
     protected $casts = [
         'valor_unidade' => 'float',
-        'quantidade' => 'int',
-        'valor_total' => 'float'
+        'valor_total' => 'float',
+        'valor_pago' => 'float',
+        'pago' => 'boolean',
     ];
 }

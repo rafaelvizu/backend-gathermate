@@ -15,7 +15,7 @@ class CategoriaDespesaController extends Controller
 {
 
     #[Group(name: 'Categorias de despesas')]
-    #[Response(content: ['data' => ['categoria'], 'message' => 'Sucesso!', 'current_page' => 1, 'per_page' => 15, 'total' => 1], status: 200)]
+    #[Response(content: ['data' => ['categoria_despesa'], 'message' => 'Sucesso!', 'current_page' => 1, 'per_page' => 15, 'total' => 1], status: 200)]
     #[Authenticated]
     public function index(Request $request): JsonResponse
     {
@@ -41,7 +41,7 @@ class CategoriaDespesaController extends Controller
 
 
     #[Group(name: 'Categorias de despesas')]
-    #[Response(content: ['data' => ['despesa'], 'message' => 'Sucesso!'], status: 201)]
+    #[Response(content: ['data' => ['categoria_despesa'], 'message' => 'Sucesso!'], status: 201)]
     #[Authenticated]
     public function store(Request $request): JsonResponse
     {
@@ -62,7 +62,7 @@ class CategoriaDespesaController extends Controller
     }
 
     #[Group(name: 'Categorias de despesas')]
-    #[Response(content: ['data' => ['despesa'], 'message' => 'Sucesso!'], status: 200)]
+    #[Response(content: ['data' => ['categoria_despesa'], 'message' => 'Sucesso!'], status: 200)]
     #[Authenticated]
     public function show(CategoriaDespesa $categoriaDespesa): JsonResponse
     {
@@ -75,7 +75,7 @@ class CategoriaDespesaController extends Controller
 
 
     #[Group(name: 'Categorias de despesas')]
-    #[Response(content: ['data' => ['despesa'], 'message' => 'Sucesso!'], status: 200)]
+    #[Response(content: ['data' => ['categoria_despesa'], 'message' => 'Sucesso!'], status: 200)]
     #[Authenticated]
     public function update(Request $request, CategoriaDespesa $categoriaDespesa)
     {
