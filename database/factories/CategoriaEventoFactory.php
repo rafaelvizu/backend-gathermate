@@ -18,6 +18,8 @@ class CategoriaEventoFactory extends Factory
     {
         return [
             //
+            'nome' => $this->faker->unique()->name(),
+            'descricao' => $this->faker->text,
         ];
     }
 }

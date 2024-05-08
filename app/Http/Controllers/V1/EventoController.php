@@ -26,13 +26,17 @@ class EventoController extends Controller
             'page' => 'integer|min:1',
             'per_page' => 'integer|min:1|max:300',
             'search' => 'nullable|string|min:3|max:50',
+            'categoria_evento_id' => 'nullable|in:categorias_eventos,id',
         ]);
 
         $eventos = Evento::when($request->search, function ($query, $search) {
             return $query->where('nome', 'like', "%$search%");
         })
-        ->withCount('inscricoes')
-        ->paginate($request->per_page, ['*'], 'page', $request->page);
+            ->when($request->categoria_evento_id, function ($query, $categoria_evento_id) {
+                return $query->where('categoria_evento_id', $categoria_evento_id);
+            })
+            ->withCount('inscricoes')
+            ->paginate($request->per_page, ['*'], 'page', $request->page);
 
         return response()->json([
             'data' => $eventos->items(),
@@ -62,6 +66,7 @@ class EventoController extends Controller
             'cidade_id' => 'nullable|in:' . Cidade::pluck('id')->implode(','),
             'cep' => 'nullable|regex:/\d{5}-\d{3}/',
             'link' => 'nullable|url',
+            'categoria_evento_id' => 'required|in:categorias_eventos,id',
         ]);
 
         $cidade = Cidade::find($request->cidade);
@@ -83,7 +88,7 @@ class EventoController extends Controller
             'cep' => $request->cep,
             'estado' => $estado,
             'link' => $request->link,
-
+            'categoria_evento_id' => $request->categoria_evento_id,
         ]);
 
         $response_json = [
@@ -130,7 +135,7 @@ class EventoController extends Controller
             'cidade_id' => 'nullable|in:' . Cidade::pluck('id')->implode(','),
             'cep' => 'nullable|regex:/\d{5}-\d{3}/',
             'link' => 'nullable|url',
-
+            'categoria_evento_id' => 'required|in:categorias_eventos,id',
         ]);
 
         $cidade = Cidade::find($request->cidade);
@@ -151,6 +156,7 @@ class EventoController extends Controller
             'cep' => $request->cep,
             'estado' => $estado,
             'link' => $request->link,
+            'categoria_evento_id' => $request->categoria_evento_id,
         ]);
 
         $response_json = [

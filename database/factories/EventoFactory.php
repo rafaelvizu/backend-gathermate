@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\CategoriaEvento;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -30,6 +31,7 @@ class EventoFactory extends Factory
             'estado' => $this->faker->city,
             'link' => $this->faker->url,
             'imagem' => $this->faker->imageUrl(),
+            'categoria_evento_id' => CategoriaEvento::all()->random()->id,
         ];
     }
 }

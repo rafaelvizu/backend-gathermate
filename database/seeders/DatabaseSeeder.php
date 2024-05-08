@@ -16,8 +16,11 @@ class DatabaseSeeder extends Seeder
         User::factory(10)->create();
 
         $this->call([
+            CategoriaDespesaSeeder::class,
+            CategoriaEventoSeeder::class,
             EventoSeeder::class,
             InscricaoSeeder::class,
+            DespesaSeeder::class,
         ]);
     }
 }

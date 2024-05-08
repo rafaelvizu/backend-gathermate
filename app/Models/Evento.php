@@ -25,9 +25,10 @@ class Evento extends Model
         'estado',
         'link',
         'imagem',
+        'categoria_evento_id',
     ];
 
-    protected $with = 'categoriaEvento';
+    protected $with = ['categoriaEvento'];
 
     protected $casts = [
         'data_inicio' => 'datetime',
@@ -41,7 +42,7 @@ class Evento extends Model
 
     public function categoriaEvento(): BelongsTo
     {
-        return $this->belongsTo(CategoriaEvento::class);
+        return $this->belongsTo(CategoriaEvento::class, 'categoria_evento_id');
     }
 
 }

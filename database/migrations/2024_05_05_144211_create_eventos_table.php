@@ -30,6 +30,11 @@ return new class extends Migration
             $table->text('link')->nullable();
             $table->text('imagem')->nullable();
 
+            $table->foreignUuid('categoria_evento_id')
+                ->constrained('categoria_eventos')
+                ->cascadeOnUpdate()
+                ->cascadeOnUpdate();
+
             $table->timestamps();
         });
     }
