@@ -46,11 +46,11 @@ paths:
                 email:
                   type: string
                   description: 'O campo value deve ser um endereço de e-mail válido.'
-                  example: darius.klein@example.net
+                  example: juston.swaniawski@example.org
                 password:
                   type: string
                   description: ''
-                  example: porro
+                  example: reiciendis
               required:
                 - email
                 - password
@@ -136,11 +136,11 @@ paths:
                 password:
                   type: string
                   description: 'O campo value deve ter pelo menos 6 caracteres. O campo value não pode ser superior a 255 caracteres.'
-                  example: "'!8sU]hl@`D"
+                  example: 'D`COu+S33Ddr?3V:DXk'
                 old_password:
                   type: string
                   description: 'O campo value deve ter pelo menos 6 caracteres. O campo value não pode ser superior a 255 caracteres.'
-                  example: wlifjddmznpgxbqquctheaife
+                  example: sgamjifuagqewcwluuzu
               required:
                 - password
                 - old_password
@@ -227,15 +227,15 @@ paths:
                 page:
                   type: integer
                   description: 'O campo value deve ser pelo menos 1.'
-                  example: 15
+                  example: 84
                 per_page:
                   type: integer
                   description: 'O campo value deve ser pelo menos 1. O campo value não pode ser superior a 300.'
-                  example: 19
+                  example: 21
                 search:
                   type: string
                   description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres.'
-                  example: sytz
+                  example: tlufwuattanrwbxxi
     post:
       summary: ''
       operationId: postApiV1CategoriasDespesa
@@ -274,11 +274,11 @@ paths:
                 nome:
                   type: string
                   description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 100 caracteres.'
-                  example: e
+                  example: vhpeqbdgdqidtdkcu
                 descricao:
                   type: string
                   description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 1000 caracteres.'
-                  example: bsfacrxntjxkoymuvmdphfwzx
+                  example: zonkmg
               required:
                 - nome
                 - descricao
@@ -321,11 +321,11 @@ paths:
                 nome:
                   type: string
                   description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 100 caracteres.'
-                  example: ucojfzpnkh
+                  example: lpcwcbnnsolohgsgcglcfbk
                 descricao:
                   type: string
                   description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 1000 caracteres.'
-                  example: idr
+                  example: keuhq
               required:
                 - nome
                 - descricao
@@ -334,7 +334,199 @@ paths:
         in: path
         name: categoriaDespesa_id
         description: 'The ID of the categoriaDespesa.'
-        example: voluptatem
+        example: 9bfefb2a-da44-4462-bca8-09e4e4c81d53
+        required: true
+        schema:
+          type: string
+  /api/v1/categoria-eventos:
+    get:
+      summary: ''
+      operationId: getApiV1CategoriaEventos
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    - categoria_eventos
+                  message: Sucesso!
+                  current_page: 1
+                  per_page: 15
+                  total: 1
+                properties:
+                  data:
+                    type: array
+                    example:
+                      - categoria_eventos
+                    items:
+                      type: string
+                  message:
+                    type: string
+                    example: Sucesso!
+                  current_page:
+                    type: integer
+                    example: 1
+                  per_page:
+                    type: integer
+                    example: 15
+                  total:
+                    type: integer
+                    example: 1
+      tags:
+        - 'Categorias de eventos'
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                page:
+                  type: integer
+                  description: 'O campo value deve ser pelo menos 1.'
+                  example: 24
+                per_page:
+                  type: integer
+                  description: 'O campo value deve ser pelo menos 1. O campo value não pode ser superior a 300.'
+                  example: 23
+                search:
+                  type: string
+                  description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres.'
+                  example: eejqtugjw
+      security: []
+    post:
+      summary: ''
+      operationId: postApiV1CategoriaEventos
+      description: ''
+      parameters: []
+      responses:
+        201:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    - categoria_eventos
+                  message: Sucesso!
+                properties:
+                  data:
+                    type: array
+                    example:
+                      - categoria_eventos
+                    items:
+                      type: string
+                  message:
+                    type: string
+                    example: Sucesso!
+      tags:
+        - 'Categorias de eventos'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nome:
+                  type: string
+                  description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 100 caracteres.'
+                  example: ngizxoafijja
+                descricao:
+                  type: string
+                  description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 1000 caracteres.'
+                  example: xqtkelknj
+              required:
+                - nome
+                - descricao
+  '/api/v1/categoria-eventos/{categoriaEvento_id}':
+    get:
+      summary: ''
+      operationId: getApiV1CategoriaEventosCategoriaEvento_id
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    - categoria_eventos
+                  message: Sucesso!
+                properties:
+                  data:
+                    type: array
+                    example:
+                      - categoria_eventos
+                    items:
+                      type: string
+                  message:
+                    type: string
+                    example: Sucesso!
+      tags:
+        - 'Categorias de eventos'
+      security: []
+    put:
+      summary: ''
+      operationId: putApiV1CategoriaEventosCategoriaEvento_id
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    - categoria_eventos
+                  message: Sucesso!
+                properties:
+                  data:
+                    type: array
+                    example:
+                      - categoria_eventos
+                    items:
+                      type: string
+                  message:
+                    type: string
+                    example: Sucesso!
+      tags:
+        - 'Categorias de eventos'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nome:
+                  type: string
+                  description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 100 caracteres.'
+                  example: spk
+                descricao:
+                  type: string
+                  description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 1000 caracteres.'
+                  example: naj
+              required:
+                - nome
+                - descricao
+    parameters:
+      -
+        in: path
+        name: categoriaEvento_id
+        description: 'The ID of the categoriaEvento.'
+        example: 9bfefb2b-7325-4c26-9648-158544b4523d
         required: true
         schema:
           type: string
@@ -377,15 +569,15 @@ paths:
                 search:
                   type: string
                   description: ''
-                  example: labore
+                  example: nihil
                 per_page:
                   type: integer
                   description: ''
-                  example: 19
+                  example: 11
                 page:
                   type: integer
                   description: ''
-                  example: 9
+                  example: 2
   /api/v1/eventos:
     get:
       summary: ''
@@ -437,15 +629,19 @@ paths:
                 page:
                   type: integer
                   description: 'O campo value deve ser pelo menos 1.'
-                  example: 41
+                  example: 53
                 per_page:
                   type: integer
                   description: 'O campo value deve ser pelo menos 1. O campo value não pode ser superior a 300.'
-                  example: 6
+                  example: 12
                 search:
                   type: string
                   description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres.'
-                  example: qjzglvxchaciyaeobyamzexmk
+                  example: ptdesivzbsv
+                categoria_evento_id:
+                  type: string
+                  description: ''
+                  example: null
       security: []
     post:
       summary: ''
@@ -485,23 +681,23 @@ paths:
                 nome:
                   type: string
                   description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres.'
-                  example: qfnpfjvfewjoecmtughiif
+                  example: iyhucmaqzms
                 descricao:
                   type: string
                   description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres.'
-                  example: pbamjwfolcpwjgib
+                  example: bmxmzbjpfddudgzuhmzrawhvp
                 data_inicio:
                   type: string
                   description: 'O campo value não é uma data válida.'
-                  example: '2024-05-07T22:41:43'
+                  example: '2024-05-08T16:22:26'
                 data_fim:
                   type: string
                   description: 'O campo value não é uma data válida. O campo value deve ser uma data posterior a <code>data_inicio</code>.'
-                  example: '2091-04-17'
+                  example: '2070-06-21'
                 modalidade:
                   type: string
                   description: ''
-                  example: presencial
+                  example: online
                   enum:
                     - presencial
                     - online
@@ -509,7 +705,7 @@ paths:
                 endereco:
                   type: string
                   description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres.'
-                  example: kfkfsomhdvqhdfvgnw
+                  example: wesloni
                 cidade_id:
                   type: string
                   description: ''
@@ -517,11 +713,15 @@ paths:
                 cep:
                   type: string
                   description: 'Must match the regex /\d{5}-\d{3}/.'
-                  example: 90844-286
+                  example: 35692-173
                 link:
                   type: string
                   description: 'Must be a valid URL.'
-                  example: 'http://schneider.com/'
+                  example: 'http://waters.com/'
+                categoria_evento_id:
+                  type: string
+                  description: ''
+                  example: null
               required:
                 - nome
                 - descricao
@@ -599,23 +799,23 @@ paths:
                 descricao:
                   type: string
                   description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres.'
-                  example: wmgpsclmdvahybmnofepw
+                  example: jfifwkkjrydpqqq
                 data_inicio:
                   type: string
                   description: 'O campo value não é uma data válida.'
-                  example: '2024-05-07T22:41:43'
+                  example: '2024-05-08T16:22:26'
                 data_fim:
                   type: string
                   description: 'O campo value não é uma data válida. O campo value deve ser uma data posterior a <code>data_inicio</code>.'
-                  example: '2087-06-28'
+                  example: '2042-03-17'
                 online:
                   type: boolean
                   description: ''
-                  example: true
+                  example: false
                 endereco:
                   type: string
                   description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres.'
-                  example: jmrla
+                  example: fjeuvkriyuoupkrvipyzzocql
                 cidade_id:
                   type: string
                   description: ''
@@ -623,11 +823,15 @@ paths:
                 cep:
                   type: string
                   description: 'Must match the regex /\d{5}-\d{3}/.'
-                  example: 96331-977
+                  example: 03056-313
                 link:
                   type: string
                   description: 'Must be a valid URL.'
-                  example: 'https://www.dooley.com/placeat-dolor-nemo-vitae-voluptatibus-ut'
+                  example: 'https://www.ullrich.com/atque-facilis-et-repellat-ea-atque'
+                categoria_evento_id:
+                  type: string
+                  description: ''
+                  example: null
               required:
                 - descricao
                 - data_inicio
@@ -657,7 +861,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the evento.'
-        example: 9bfd5da9-015f-4497-b293-103b3d3a49c9
+        example: 9bfefb2c-1bad-4914-b496-354dfa97b00a
         required: true
         schema:
           type: string
@@ -712,15 +916,15 @@ paths:
                 page:
                   type: integer
                   description: 'O campo value deve ser pelo menos 1.'
-                  example: 69
+                  example: 74
                 per_page:
                   type: integer
                   description: 'O campo value deve ser pelo menos 1. O campo value não pode ser superior a 300.'
-                  example: 24
+                  example: 8
                 search:
                   type: string
                   description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres.'
-                  example: rantgavasjt
+                  example: dhnzktpxwxvdtocto
     post:
       summary: ''
       operationId: postApiV1ManageUsers
@@ -759,11 +963,11 @@ paths:
                 name:
                   type: string
                   description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres.'
-                  example: k
+                  example: zycpfwwkjvhxutywkkrkus
                 email:
                   type: string
                   description: 'O campo value deve ser um endereço de e-mail válido.'
-                  example: elliot.brakus@example.com
+                  example: giovani.oconner@example.org
               required:
                 - name
                 - email
@@ -830,7 +1034,7 @@ paths:
                 is_active:
                   type: boolean
                   description: ''
-                  example: true
+                  example: false
               required:
                 - is_active
     parameters:
@@ -838,7 +1042,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the user.'
-        example: 9bfd5da8-e970-4351-b50b-802e9bdea090
+        example: 9bfefb28-3d69-424b-b9ce-b61df8c7a629
         required: true
         schema:
           type: string
@@ -868,7 +1072,7 @@ paths:
         in: path
         name: user_id
         description: 'The ID of the user.'
-        example: 9bfd5da8-e970-4351-b50b-802e9bdea090
+        example: 9bfefb28-3d69-424b-b9ce-b61df8c7a629
         required: true
         schema:
           type: string
@@ -911,11 +1115,11 @@ paths:
                 evento_id:
                   type: string
                   description: ''
-                  example: pariatur
+                  example: reprehenderit
                 nome:
                   type: string
                   description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres.'
-                  example: yvtt
+                  example: koizctwerljzhikms
                 email:
                   type: string
                   description: ''
@@ -923,7 +1127,7 @@ paths:
                 cpf:
                   type: string
                   description: 'O campo value deve ter pelo menos 11 caracteres. O campo value não pode ser superior a 14 caracteres.'
-                  example: nqjrqbtv
+                  example: rjoqy
               required:
                 - evento_id
                 - nome
@@ -979,15 +1183,15 @@ paths:
                 page:
                   type: integer
                   description: 'O campo value deve ser pelo menos 1.'
-                  example: 22
+                  example: 35
                 per_page:
                   type: integer
                   description: 'O campo value deve ser pelo menos 1. O campo value não pode ser superior a 300.'
-                  example: 11
+                  example: 14
                 search:
                   type: string
                   description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres.'
-                  example: biskgegiexdlb
+                  example: vmoxedwpuhqfcwztrmt
   '/api/v1/inscricoes/{inscricao_id}':
     get:
       summary: ''
@@ -1022,7 +1226,7 @@ paths:
         in: path
         name: inscricao_id
         description: 'The ID of the inscricao.'
-        example: 9bfd5db1-a0e2-4928-8c19-a70612ea0305
+        example: 9bfefb3f-9cd2-45d0-88ba-7a5dded0fd7f
         required: true
         schema:
           type: string
@@ -1032,6 +1236,9 @@ tags:
     description: ''
   -
     name: 'Categorias de despesas'
+    description: ''
+  -
+    name: 'Categorias de eventos'
     description: ''
   -
     name: Dicionários

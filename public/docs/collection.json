@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "API Documentation",
-        "_postman_id": "c03fcea6-095f-47f8-9db1-a00e8e9e961e",
+        "_postman_id": "31c0ba0c-ec16-4f86-a3ab-f722961cf2cb",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"darius.klein@example.net\",\"password\":\"porro\"}"
+                            "raw": "{\"email\":\"juston.swaniawski@example.org\",\"password\":\"reiciendis\"}"
                         },
                         "description": "",
                         "auth": {
@@ -143,7 +143,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"password\":\"'!8sU]hl@`D\",\"old_password\":\"wlifjddmznpgxbqquctheaife\"}"
+                            "raw": "{\"password\":\"D`COu+S33Ddr?3V:DXk\",\"old_password\":\"sgamjifuagqewcwluuzu\"}"
                         },
                         "description": ""
                     },
@@ -219,7 +219,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"page\":15,\"per_page\":19,\"search\":\"sytz\"}"
+                            "raw": "{\"page\":84,\"per_page\":21,\"search\":\"tlufwuattanrwbxxi\"}"
                         },
                         "description": ""
                     },
@@ -254,7 +254,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"nome\":\"e\",\"descricao\":\"bsfacrxntjxkoymuvmdphfwzx\"}"
+                            "raw": "{\"nome\":\"vhpeqbdgdqidtdkcu\",\"descricao\":\"zonkmg\"}"
                         },
                         "description": ""
                     },
@@ -279,7 +279,7 @@
                                 {
                                     "id": "categoriaDespesa_id",
                                     "key": "categoriaDespesa_id",
-                                    "value": "voluptatem",
+                                    "value": "9bfefb2a-da44-4462-bca8-09e4e4c81d53",
                                     "description": "The ID of the categoriaDespesa."
                                 }
                             ]
@@ -297,7 +297,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"nome\":\"ucojfzpnkh\",\"descricao\":\"idr\"}"
+                            "raw": "{\"nome\":\"lpcwcbnnsolohgsgcglcfbk\",\"descricao\":\"keuhq\"}"
                         },
                         "description": ""
                     },
@@ -306,6 +306,171 @@
                             "header": [],
                             "code": 200,
                             "body": "{\"data\":[\"categoria_despesa\"],\"message\":\"Sucesso!\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Categorias de eventos",
+            "description": "",
+            "item": [
+                {
+                    "name": "GET api\/v1\/categoria-eventos",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/categoria-eventos",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/categoria-eventos"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"page\":24,\"per_page\":23,\"search\":\"eejqtugjw\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":[\"categoria_eventos\"],\"message\":\"Sucesso!\",\"current_page\":1,\"per_page\":15,\"total\":1}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/v1\/categoria-eventos\/{categoriaEvento_id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/categoria-eventos\/:categoriaEvento_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/categoria-eventos\/:categoriaEvento_id",
+                            "variable": [
+                                {
+                                    "id": "categoriaEvento_id",
+                                    "key": "categoriaEvento_id",
+                                    "value": "9bfefb2b-7325-4c26-9648-158544b4523d",
+                                    "description": "The ID of the categoriaEvento."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":[\"categoria_eventos\"],\"message\":\"Sucesso!\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "POST api\/v1\/categoria-eventos",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/categoria-eventos",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/categoria-eventos"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"nome\":\"ngizxoafijja\",\"descricao\":\"xqtkelknj\"}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 201,
+                            "body": "{\"data\":[\"categoria_eventos\"],\"message\":\"Sucesso!\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "PUT api\/v1\/categoria-eventos\/{categoriaEvento_id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/categoria-eventos\/:categoriaEvento_id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/categoria-eventos\/:categoriaEvento_id",
+                            "variable": [
+                                {
+                                    "id": "categoriaEvento_id",
+                                    "key": "categoriaEvento_id",
+                                    "value": "9bfefb2b-7325-4c26-9648-158544b4523d",
+                                    "description": "The ID of the categoriaEvento."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"nome\":\"spk\",\"descricao\":\"naj\"}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":[\"categoria_eventos\"],\"message\":\"Sucesso!\"}",
                             "name": ""
                         }
                     ]
@@ -338,7 +503,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"search\":\"labore\",\"per_page\":19,\"page\":9}"
+                            "raw": "{\"search\":\"nihil\",\"per_page\":11,\"page\":2}"
                         },
                         "description": ""
                     },
@@ -379,7 +544,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"page\":41,\"per_page\":6,\"search\":\"qjzglvxchaciyaeobyamzexmk\"}"
+                            "raw": "{\"page\":53,\"per_page\":12,\"search\":\"ptdesivzbsv\"}"
                         },
                         "description": "",
                         "auth": {
@@ -407,7 +572,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "9bfd5da9-015f-4497-b293-103b3d3a49c9",
+                                    "value": "9bfefb2c-1bad-4914-b496-354dfa97b00a",
                                     "description": "The ID of the evento."
                                 }
                             ]
@@ -460,7 +625,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"nome\":\"qfnpfjvfewjoecmtughiif\",\"descricao\":\"pbamjwfolcpwjgib\",\"data_inicio\":\"2024-05-07T22:41:43\",\"data_fim\":\"2091-04-17\",\"modalidade\":\"presencial\",\"endereco\":\"kfkfsomhdvqhdfvgnw\",\"cep\":\"90844-286\",\"link\":\"http:\\\/\\\/schneider.com\\\/\"}"
+                            "raw": "{\"nome\":\"iyhucmaqzms\",\"descricao\":\"bmxmzbjpfddudgzuhmzrawhvp\",\"data_inicio\":\"2024-05-08T16:22:26\",\"data_fim\":\"2070-06-21\",\"modalidade\":\"online\",\"endereco\":\"wesloni\",\"cep\":\"35692-173\",\"link\":\"http:\\\/\\\/waters.com\\\/\"}"
                         },
                         "description": ""
                     },
@@ -485,7 +650,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "9bfd5da9-015f-4497-b293-103b3d3a49c9",
+                                    "value": "9bfefb2c-1bad-4914-b496-354dfa97b00a",
                                     "description": "The ID of the evento."
                                 }
                             ]
@@ -503,7 +668,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"descricao\":\"wmgpsclmdvahybmnofepw\",\"data_inicio\":\"2024-05-07T22:41:43\",\"data_fim\":\"2087-06-28\",\"online\":true,\"endereco\":\"jmrla\",\"cep\":\"96331-977\",\"link\":\"https:\\\/\\\/www.dooley.com\\\/placeat-dolor-nemo-vitae-voluptatibus-ut\"}"
+                            "raw": "{\"descricao\":\"jfifwkkjrydpqqq\",\"data_inicio\":\"2024-05-08T16:22:26\",\"data_fim\":\"2042-03-17\",\"online\":false,\"endereco\":\"fjeuvkriyuoupkrvipyzzocql\",\"cep\":\"03056-313\",\"link\":\"https:\\\/\\\/www.ullrich.com\\\/atque-facilis-et-repellat-ea-atque\"}"
                         },
                         "description": ""
                     },
@@ -528,7 +693,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "9bfd5da9-015f-4497-b293-103b3d3a49c9",
+                                    "value": "9bfefb2c-1bad-4914-b496-354dfa97b00a",
                                     "description": "The ID of the evento."
                                 }
                             ]
@@ -584,7 +749,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"page\":69,\"per_page\":24,\"search\":\"rantgavasjt\"}"
+                            "raw": "{\"page\":74,\"per_page\":8,\"search\":\"dhnzktpxwxvdtocto\"}"
                         },
                         "description": ""
                     },
@@ -609,7 +774,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "9bfd5da8-e970-4351-b50b-802e9bdea090",
+                                    "value": "9bfefb28-3d69-424b-b9ce-b61df8c7a629",
                                     "description": "The ID of the user."
                                 }
                             ]
@@ -659,7 +824,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"k\",\"email\":\"elliot.brakus@example.com\"}"
+                            "raw": "{\"name\":\"zycpfwwkjvhxutywkkrkus\",\"email\":\"giovani.oconner@example.org\"}"
                         },
                         "description": ""
                     },
@@ -684,7 +849,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "9bfd5da8-e970-4351-b50b-802e9bdea090",
+                                    "value": "9bfefb28-3d69-424b-b9ce-b61df8c7a629",
                                     "description": "The ID of the user."
                                 }
                             ]
@@ -702,7 +867,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"is_active\":true}"
+                            "raw": "{\"is_active\":false}"
                         },
                         "description": ""
                     },
@@ -727,7 +892,7 @@
                                 {
                                     "id": "user_id",
                                     "key": "user_id",
-                                    "value": "9bfd5da8-e970-4351-b50b-802e9bdea090",
+                                    "value": "9bfefb28-3d69-424b-b9ce-b61df8c7a629",
                                     "description": "The ID of the user."
                                 }
                             ]
@@ -783,7 +948,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"evento_id\":\"pariatur\",\"nome\":\"yvtt\",\"cpf\":\"nqjrqbtv\"}"
+                            "raw": "{\"evento_id\":\"reprehenderit\",\"nome\":\"koizctwerljzhikms\",\"cpf\":\"rjoqy\"}"
                         },
                         "description": "",
                         "auth": {
@@ -821,7 +986,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"page\":22,\"per_page\":11,\"search\":\"biskgegiexdlb\"}"
+                            "raw": "{\"page\":35,\"per_page\":14,\"search\":\"vmoxedwpuhqfcwztrmt\"}"
                         },
                         "description": ""
                     },
@@ -846,7 +1011,7 @@
                                 {
                                     "id": "inscricao_id",
                                     "key": "inscricao_id",
-                                    "value": "9bfd5db1-a0e2-4928-8c19-a70612ea0305",
+                                    "value": "9bfefb3f-9cd2-45d0-88ba-7a5dded0fd7f",
                                     "description": "The ID of the inscricao."
                                 }
                             ]

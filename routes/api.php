@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CidadeController;
 use App\Http\Controllers\V1\CategoriaDespesaController;
+use App\Http\Controllers\V1\CategoriaEventoController;
 use App\Http\Controllers\V1\EventoController;
 use App\Http\Controllers\V1\InscricaoController;
 use App\Http\Controllers\V1\ManageUser;
@@ -100,6 +101,25 @@ Route::prefix('v1')->group(function () {
 
         Route::put('/{categoriaDespesa}', [CategoriaDespesaController::class, 'update'])
             ->name('v1.categorias-despesa.update');
+    });
+
+    Route::prefix('categoria-eventos')->group(function () {
+        Route::get('/', [CategoriaEventoController::class, 'index'])
+            ->name('v1.categoria-eventos.index');
+
+        Route::get('/{categoriaEvento}', [CategoriaEventoController::class, 'show'])
+            ->name('v1.categoria-eventos.show');
+
+        Route::middleware(['auth:sanctum', 'can:admin'])->group(function () {
+            Route::post('/', [CategoriaEventoController::class, 'store'])
+                ->name('v1.categoria-eventos.store');
+
+            Route::put('/{categoriaEvento}', [CategoriaEventoController::class, 'update'])
+                ->name('v1.categoria-eventos.update');
+
+        });
+
+
     });
 
 });

@@ -104,6 +104,25 @@
                             </li>
                                                                         </ul>
                             </ul>
+                    <ul id="tocify-header-categorias-de-eventos" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="categorias-de-eventos">
+                    <a href="#categorias-de-eventos">Categorias de eventos</a>
+                </li>
+                                    <ul id="tocify-subheader-categorias-de-eventos" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="categorias-de-eventos-GETapi-v1-categoria-eventos">
+                                <a href="#categorias-de-eventos-GETapi-v1-categoria-eventos">GET api/v1/categoria-eventos</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="categorias-de-eventos-GETapi-v1-categoria-eventos--categoriaEvento_id-">
+                                <a href="#categorias-de-eventos-GETapi-v1-categoria-eventos--categoriaEvento_id-">GET api/v1/categoria-eventos/{categoriaEvento_id}</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="categorias-de-eventos-POSTapi-v1-categoria-eventos">
+                                <a href="#categorias-de-eventos-POSTapi-v1-categoria-eventos">POST api/v1/categoria-eventos</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="categorias-de-eventos-PUTapi-v1-categoria-eventos--categoriaEvento_id-">
+                                <a href="#categorias-de-eventos-PUTapi-v1-categoria-eventos--categoriaEvento_id-">PUT api/v1/categoria-eventos/{categoriaEvento_id}</a>
+                            </li>
+                                                                        </ul>
+                            </ul>
                     <ul id="tocify-header-dicionarios" class="tocify-header">
                 <li class="tocify-item level-1" data-unique="dicionarios">
                     <a href="#dicionarios">Dicionários</a>
@@ -183,7 +202,7 @@
     </ul>
 
     <ul class="toc-footer" id="last-updated">
-        <li>Last updated: May 7, 2024</li>
+        <li>Last updated: May 8, 2024</li>
     </ul>
 </div>
 
@@ -224,8 +243,8 @@ You can switch the language used with the tabs at the top right (or from the nav
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"darius.klein@example.net\",
-    \"password\": \"porro\"
+    \"email\": \"juston.swaniawski@example.org\",
+    \"password\": \"reiciendis\"
 }"
 </code></pre></div>
 
@@ -241,8 +260,8 @@ const headers = {
 };
 
 let body = {
-    "email": "darius.klein@example.net",
-    "password": "porro"
+    "email": "juston.swaniawski@example.org",
+    "password": "reiciendis"
 };
 
 fetch(url, {
@@ -343,10 +362,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTapi-v1-auth-login"
-               value="darius.klein@example.net"
+               value="juston.swaniawski@example.org"
                data-component="body">
     <br>
-<p>O campo value deve ser um endereço de e-mail válido. Example: <code>darius.klein@example.net</code></p>
+<p>O campo value deve ser um endereço de e-mail válido. Example: <code>juston.swaniawski@example.org</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -354,10 +373,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="POSTapi-v1-auth-login"
-               value="porro"
+               value="reiciendis"
                data-component="body">
     <br>
-<p>Example: <code>porro</code></p>
+<p>Example: <code>reiciendis</code></p>
         </div>
         </form>
 
@@ -645,8 +664,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"password\": \"\'!8sU]hl@`D\",
-    \"old_password\": \"wlifjddmznpgxbqquctheaife\"
+    \"password\": \"D`COu+S33Ddr?3V:DXk\",
+    \"old_password\": \"sgamjifuagqewcwluuzu\"
 }"
 </code></pre></div>
 
@@ -663,8 +682,8 @@ const headers = {
 };
 
 let body = {
-    "password": "'!8sU]hl@`D",
-    "old_password": "wlifjddmznpgxbqquctheaife"
+    "password": "D`COu+S33Ddr?3V:DXk",
+    "old_password": "sgamjifuagqewcwluuzu"
 };
 
 fetch(url, {
@@ -773,10 +792,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="POSTapi-v1-auth-reset-password"
-               value="'!8sU]hl@`D"
+               value="D`COu+S33Ddr?3V:DXk"
                data-component="body">
     <br>
-<p>O campo value deve ter pelo menos 6 caracteres. O campo value não pode ser superior a 255 caracteres. Example: <code>'!8sU]hl@</code>D`</p>
+<p>O campo value deve ter pelo menos 6 caracteres. O campo value não pode ser superior a 255 caracteres. Example: <code>D</code>COu+S33Ddr?3V:DXk`</p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>old_password</code></b>&nbsp;&nbsp;
@@ -784,10 +803,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="old_password"                data-endpoint="POSTapi-v1-auth-reset-password"
-               value="wlifjddmznpgxbqquctheaife"
+               value="sgamjifuagqewcwluuzu"
                data-component="body">
     <br>
-<p>O campo value deve ter pelo menos 6 caracteres. O campo value não pode ser superior a 255 caracteres. Example: <code>wlifjddmznpgxbqquctheaife</code></p>
+<p>O campo value deve ter pelo menos 6 caracteres. O campo value não pode ser superior a 255 caracteres. Example: <code>sgamjifuagqewcwluuzu</code></p>
         </div>
         </form>
 
@@ -958,9 +977,9 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"page\": 15,
-    \"per_page\": 19,
-    \"search\": \"sytz\"
+    \"page\": 84,
+    \"per_page\": 21,
+    \"search\": \"tlufwuattanrwbxxi\"
 }"
 </code></pre></div>
 
@@ -977,9 +996,9 @@ const headers = {
 };
 
 let body = {
-    "page": 15,
-    "per_page": 19,
-    "search": "sytz"
+    "page": 84,
+    "per_page": 21,
+    "search": "tlufwuattanrwbxxi"
 };
 
 fetch(url, {
@@ -1094,10 +1113,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="page"                data-endpoint="GETapi-v1-categorias-despesa"
-               value="15"
+               value="84"
                data-component="body">
     <br>
-<p>O campo value deve ser pelo menos 1. Example: <code>15</code></p>
+<p>O campo value deve ser pelo menos 1. Example: <code>84</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>per_page</code></b>&nbsp;&nbsp;
@@ -1105,10 +1124,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="per_page"                data-endpoint="GETapi-v1-categorias-despesa"
-               value="19"
+               value="21"
                data-component="body">
     <br>
-<p>O campo value deve ser pelo menos 1. O campo value não pode ser superior a 300. Example: <code>19</code></p>
+<p>O campo value deve ser pelo menos 1. O campo value não pode ser superior a 300. Example: <code>21</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>search</code></b>&nbsp;&nbsp;
@@ -1116,10 +1135,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="search"                data-endpoint="GETapi-v1-categorias-despesa"
-               value="sytz"
+               value="tlufwuattanrwbxxi"
                data-component="body">
     <br>
-<p>O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres. Example: <code>sytz</code></p>
+<p>O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres. Example: <code>tlufwuattanrwbxxi</code></p>
         </div>
         </form>
 
@@ -1142,8 +1161,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"nome\": \"e\",
-    \"descricao\": \"bsfacrxntjxkoymuvmdphfwzx\"
+    \"nome\": \"vhpeqbdgdqidtdkcu\",
+    \"descricao\": \"zonkmg\"
 }"
 </code></pre></div>
 
@@ -1160,8 +1179,8 @@ const headers = {
 };
 
 let body = {
-    "nome": "e",
-    "descricao": "bsfacrxntjxkoymuvmdphfwzx"
+    "nome": "vhpeqbdgdqidtdkcu",
+    "descricao": "zonkmg"
 };
 
 fetch(url, {
@@ -1273,10 +1292,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="nome"                data-endpoint="POSTapi-v1-categorias-despesa"
-               value="e"
+               value="vhpeqbdgdqidtdkcu"
                data-component="body">
     <br>
-<p>O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 100 caracteres. Example: <code>e</code></p>
+<p>O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 100 caracteres. Example: <code>vhpeqbdgdqidtdkcu</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>descricao</code></b>&nbsp;&nbsp;
@@ -1284,10 +1303,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="descricao"                data-endpoint="POSTapi-v1-categorias-despesa"
-               value="bsfacrxntjxkoymuvmdphfwzx"
+               value="zonkmg"
                data-component="body">
     <br>
-<p>O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 1000 caracteres. Example: <code>bsfacrxntjxkoymuvmdphfwzx</code></p>
+<p>O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 1000 caracteres. Example: <code>zonkmg</code></p>
         </div>
         </form>
 
@@ -1305,20 +1324,20 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "https://test.datime.com.br/api/v1/categorias-despesa/voluptatem" \
+    "https://test.datime.com.br/api/v1/categorias-despesa/9bfefb2a-da44-4462-bca8-09e4e4c81d53" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"nome\": \"ucojfzpnkh\",
-    \"descricao\": \"idr\"
+    \"nome\": \"lpcwcbnnsolohgsgcglcfbk\",
+    \"descricao\": \"keuhq\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://test.datime.com.br/api/v1/categorias-despesa/voluptatem"
+    "https://test.datime.com.br/api/v1/categorias-despesa/9bfefb2a-da44-4462-bca8-09e4e4c81d53"
 );
 
 const headers = {
@@ -1328,8 +1347,8 @@ const headers = {
 };
 
 let body = {
-    "nome": "ucojfzpnkh",
-    "descricao": "idr"
+    "nome": "lpcwcbnnsolohgsgcglcfbk",
+    "descricao": "keuhq"
 };
 
 fetch(url, {
@@ -1441,10 +1460,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="categoriaDespesa_id"                data-endpoint="PUTapi-v1-categorias-despesa--categoriaDespesa_id-"
-               value="voluptatem"
+               value="9bfefb2a-da44-4462-bca8-09e4e4c81d53"
                data-component="url">
     <br>
-<p>The ID of the categoriaDespesa. Example: <code>voluptatem</code></p>
+<p>The ID of the categoriaDespesa. Example: <code>9bfefb2a-da44-4462-bca8-09e4e4c81d53</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -1453,10 +1472,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="nome"                data-endpoint="PUTapi-v1-categorias-despesa--categoriaDespesa_id-"
-               value="ucojfzpnkh"
+               value="lpcwcbnnsolohgsgcglcfbk"
                data-component="body">
     <br>
-<p>O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 100 caracteres. Example: <code>ucojfzpnkh</code></p>
+<p>O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 100 caracteres. Example: <code>lpcwcbnnsolohgsgcglcfbk</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>descricao</code></b>&nbsp;&nbsp;
@@ -1464,10 +1483,664 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="descricao"                data-endpoint="PUTapi-v1-categorias-despesa--categoriaDespesa_id-"
-               value="idr"
+               value="keuhq"
                data-component="body">
     <br>
-<p>O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 1000 caracteres. Example: <code>idr</code></p>
+<p>O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 1000 caracteres. Example: <code>keuhq</code></p>
+        </div>
+        </form>
+
+                <h1 id="categorias-de-eventos">Categorias de eventos</h1>
+
+    
+
+                                <h2 id="categorias-de-eventos-GETapi-v1-categoria-eventos">GET api/v1/categoria-eventos</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-v1-categoria-eventos">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "https://test.datime.com.br/api/v1/categoria-eventos" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"page\": 24,
+    \"per_page\": 23,
+    \"search\": \"eejqtugjw\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "https://test.datime.com.br/api/v1/categoria-eventos"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "page": 24,
+    "per_page": 23,
+    "search": "eejqtugjw"
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-v1-categoria-eventos">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;data&quot;: [
+        &quot;categoria_eventos&quot;
+    ],
+    &quot;message&quot;: &quot;Sucesso!&quot;,
+    &quot;current_page&quot;: 1,
+    &quot;per_page&quot;: 15,
+    &quot;total&quot;: 1
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-v1-categoria-eventos" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-v1-categoria-eventos"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-v1-categoria-eventos"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-v1-categoria-eventos" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-v1-categoria-eventos">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-v1-categoria-eventos" data-method="GET"
+      data-path="api/v1/categoria-eventos"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-v1-categoria-eventos', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-v1-categoria-eventos"
+                    onclick="tryItOut('GETapi-v1-categoria-eventos');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-v1-categoria-eventos"
+                    onclick="cancelTryOut('GETapi-v1-categoria-eventos');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-v1-categoria-eventos"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/v1/categoria-eventos</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-v1-categoria-eventos"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-v1-categoria-eventos"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>page</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="page"                data-endpoint="GETapi-v1-categoria-eventos"
+               value="24"
+               data-component="body">
+    <br>
+<p>O campo value deve ser pelo menos 1. Example: <code>24</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>per_page</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="per_page"                data-endpoint="GETapi-v1-categoria-eventos"
+               value="23"
+               data-component="body">
+    <br>
+<p>O campo value deve ser pelo menos 1. O campo value não pode ser superior a 300. Example: <code>23</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>search</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="search"                data-endpoint="GETapi-v1-categoria-eventos"
+               value="eejqtugjw"
+               data-component="body">
+    <br>
+<p>O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres. Example: <code>eejqtugjw</code></p>
+        </div>
+        </form>
+
+                    <h2 id="categorias-de-eventos-GETapi-v1-categoria-eventos--categoriaEvento_id-">GET api/v1/categoria-eventos/{categoriaEvento_id}</h2>
+
+<p>
+</p>
+
+
+
+<span id="example-requests-GETapi-v1-categoria-eventos--categoriaEvento_id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "https://test.datime.com.br/api/v1/categoria-eventos/9bfefb2b-7325-4c26-9648-158544b4523d" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "https://test.datime.com.br/api/v1/categoria-eventos/9bfefb2b-7325-4c26-9648-158544b4523d"
+);
+
+const headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-v1-categoria-eventos--categoriaEvento_id-">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;data&quot;: [
+        &quot;categoria_eventos&quot;
+    ],
+    &quot;message&quot;: &quot;Sucesso!&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-v1-categoria-eventos--categoriaEvento_id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-v1-categoria-eventos--categoriaEvento_id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-v1-categoria-eventos--categoriaEvento_id-"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-v1-categoria-eventos--categoriaEvento_id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-v1-categoria-eventos--categoriaEvento_id-">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-v1-categoria-eventos--categoriaEvento_id-" data-method="GET"
+      data-path="api/v1/categoria-eventos/{categoriaEvento_id}"
+      data-authed="0"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-v1-categoria-eventos--categoriaEvento_id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-v1-categoria-eventos--categoriaEvento_id-"
+                    onclick="tryItOut('GETapi-v1-categoria-eventos--categoriaEvento_id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-v1-categoria-eventos--categoriaEvento_id-"
+                    onclick="cancelTryOut('GETapi-v1-categoria-eventos--categoriaEvento_id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-v1-categoria-eventos--categoriaEvento_id-"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/v1/categoria-eventos/{categoriaEvento_id}</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-v1-categoria-eventos--categoriaEvento_id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-v1-categoria-eventos--categoriaEvento_id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>categoriaEvento_id</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="categoriaEvento_id"                data-endpoint="GETapi-v1-categoria-eventos--categoriaEvento_id-"
+               value="9bfefb2b-7325-4c26-9648-158544b4523d"
+               data-component="url">
+    <br>
+<p>The ID of the categoriaEvento. Example: <code>9bfefb2b-7325-4c26-9648-158544b4523d</code></p>
+            </div>
+                    </form>
+
+                    <h2 id="categorias-de-eventos-POSTapi-v1-categoria-eventos">POST api/v1/categoria-eventos</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-POSTapi-v1-categoria-eventos">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "https://test.datime.com.br/api/v1/categoria-eventos" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"nome\": \"ngizxoafijja\",
+    \"descricao\": \"xqtkelknj\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "https://test.datime.com.br/api/v1/categoria-eventos"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "nome": "ngizxoafijja",
+    "descricao": "xqtkelknj"
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-v1-categoria-eventos">
+            <blockquote>
+            <p>Example response (201):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;data&quot;: [
+        &quot;categoria_eventos&quot;
+    ],
+    &quot;message&quot;: &quot;Sucesso!&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-POSTapi-v1-categoria-eventos" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-v1-categoria-eventos"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-v1-categoria-eventos"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-POSTapi-v1-categoria-eventos" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-v1-categoria-eventos">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-POSTapi-v1-categoria-eventos" data-method="POST"
+      data-path="api/v1/categoria-eventos"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-v1-categoria-eventos', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-v1-categoria-eventos"
+                    onclick="tryItOut('POSTapi-v1-categoria-eventos');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-v1-categoria-eventos"
+                    onclick="cancelTryOut('POSTapi-v1-categoria-eventos');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-v1-categoria-eventos"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/v1/categoria-eventos</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="POSTapi-v1-categoria-eventos"
+               value="Bearer {YOUR_AUTH_KEY}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="POSTapi-v1-categoria-eventos"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="POSTapi-v1-categoria-eventos"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>nome</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="nome"                data-endpoint="POSTapi-v1-categoria-eventos"
+               value="ngizxoafijja"
+               data-component="body">
+    <br>
+<p>O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 100 caracteres. Example: <code>ngizxoafijja</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>descricao</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="descricao"                data-endpoint="POSTapi-v1-categoria-eventos"
+               value="xqtkelknj"
+               data-component="body">
+    <br>
+<p>O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 1000 caracteres. Example: <code>xqtkelknj</code></p>
+        </div>
+        </form>
+
+                    <h2 id="categorias-de-eventos-PUTapi-v1-categoria-eventos--categoriaEvento_id-">PUT api/v1/categoria-eventos/{categoriaEvento_id}</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-PUTapi-v1-categoria-eventos--categoriaEvento_id-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request PUT \
+    "https://test.datime.com.br/api/v1/categoria-eventos/9bfefb2b-7325-4c26-9648-158544b4523d" \
+    --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"nome\": \"spk\",
+    \"descricao\": \"naj\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "https://test.datime.com.br/api/v1/categoria-eventos/9bfefb2b-7325-4c26-9648-158544b4523d"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "nome": "spk",
+    "descricao": "naj"
+};
+
+fetch(url, {
+    method: "PUT",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-PUTapi-v1-categoria-eventos--categoriaEvento_id-">
+            <blockquote>
+            <p>Example response (200):</p>
+        </blockquote>
+                <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;data&quot;: [
+        &quot;categoria_eventos&quot;
+    ],
+    &quot;message&quot;: &quot;Sucesso!&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-PUTapi-v1-categoria-eventos--categoriaEvento_id-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-PUTapi-v1-categoria-eventos--categoriaEvento_id-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-PUTapi-v1-categoria-eventos--categoriaEvento_id-"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-PUTapi-v1-categoria-eventos--categoriaEvento_id-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-PUTapi-v1-categoria-eventos--categoriaEvento_id-">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-PUTapi-v1-categoria-eventos--categoriaEvento_id-" data-method="PUT"
+      data-path="api/v1/categoria-eventos/{categoriaEvento_id}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('PUTapi-v1-categoria-eventos--categoriaEvento_id-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-PUTapi-v1-categoria-eventos--categoriaEvento_id-"
+                    onclick="tryItOut('PUTapi-v1-categoria-eventos--categoriaEvento_id-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-PUTapi-v1-categoria-eventos--categoriaEvento_id-"
+                    onclick="cancelTryOut('PUTapi-v1-categoria-eventos--categoriaEvento_id-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-PUTapi-v1-categoria-eventos--categoriaEvento_id-"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-darkblue">PUT</small>
+            <b><code>api/v1/categoria-eventos/{categoriaEvento_id}</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="PUTapi-v1-categoria-eventos--categoriaEvento_id-"
+               value="Bearer {YOUR_AUTH_KEY}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {YOUR_AUTH_KEY}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="PUTapi-v1-categoria-eventos--categoriaEvento_id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="PUTapi-v1-categoria-eventos--categoriaEvento_id-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>categoriaEvento_id</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="categoriaEvento_id"                data-endpoint="PUTapi-v1-categoria-eventos--categoriaEvento_id-"
+               value="9bfefb2b-7325-4c26-9648-158544b4523d"
+               data-component="url">
+    <br>
+<p>The ID of the categoriaEvento. Example: <code>9bfefb2b-7325-4c26-9648-158544b4523d</code></p>
+            </div>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>nome</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="nome"                data-endpoint="PUTapi-v1-categoria-eventos--categoriaEvento_id-"
+               value="spk"
+               data-component="body">
+    <br>
+<p>O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 100 caracteres. Example: <code>spk</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>descricao</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="descricao"                data-endpoint="PUTapi-v1-categoria-eventos--categoriaEvento_id-"
+               value="naj"
+               data-component="body">
+    <br>
+<p>O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 1000 caracteres. Example: <code>naj</code></p>
         </div>
         </form>
 
@@ -1494,9 +2167,9 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"search\": \"labore\",
-    \"per_page\": 19,
-    \"page\": 9
+    \"search\": \"nihil\",
+    \"per_page\": 11,
+    \"page\": 2
 }"
 </code></pre></div>
 
@@ -1513,9 +2186,9 @@ const headers = {
 };
 
 let body = {
-    "search": "labore",
-    "per_page": 19,
-    "page": 9
+    "search": "nihil",
+    "per_page": 11,
+    "page": 2
 };
 
 fetch(url, {
@@ -1627,10 +2300,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="search"                data-endpoint="GETapi-v1-dict-cidades"
-               value="labore"
+               value="nihil"
                data-component="body">
     <br>
-<p>Example: <code>labore</code></p>
+<p>Example: <code>nihil</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>per_page</code></b>&nbsp;&nbsp;
@@ -1638,10 +2311,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="per_page"                data-endpoint="GETapi-v1-dict-cidades"
-               value="19"
+               value="11"
                data-component="body">
     <br>
-<p>Example: <code>19</code></p>
+<p>Example: <code>11</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>page</code></b>&nbsp;&nbsp;
@@ -1649,10 +2322,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="page"                data-endpoint="GETapi-v1-dict-cidades"
-               value="9"
+               value="2"
                data-component="body">
     <br>
-<p>Example: <code>9</code></p>
+<p>Example: <code>2</code></p>
         </div>
         </form>
 
@@ -1677,9 +2350,9 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"page\": 41,
-    \"per_page\": 6,
-    \"search\": \"qjzglvxchaciyaeobyamzexmk\"
+    \"page\": 53,
+    \"per_page\": 12,
+    \"search\": \"ptdesivzbsv\"
 }"
 </code></pre></div>
 
@@ -1695,9 +2368,9 @@ const headers = {
 };
 
 let body = {
-    "page": 41,
-    "per_page": 6,
-    "search": "qjzglvxchaciyaeobyamzexmk"
+    "page": 53,
+    "per_page": 12,
+    "search": "ptdesivzbsv"
 };
 
 fetch(url, {
@@ -1801,10 +2474,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="page"                data-endpoint="GETapi-v1-eventos"
-               value="41"
+               value="53"
                data-component="body">
     <br>
-<p>O campo value deve ser pelo menos 1. Example: <code>41</code></p>
+<p>O campo value deve ser pelo menos 1. Example: <code>53</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>per_page</code></b>&nbsp;&nbsp;
@@ -1812,10 +2485,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="per_page"                data-endpoint="GETapi-v1-eventos"
-               value="6"
+               value="12"
                data-component="body">
     <br>
-<p>O campo value deve ser pelo menos 1. O campo value não pode ser superior a 300. Example: <code>6</code></p>
+<p>O campo value deve ser pelo menos 1. O campo value não pode ser superior a 300. Example: <code>12</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>search</code></b>&nbsp;&nbsp;
@@ -1823,10 +2496,21 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="search"                data-endpoint="GETapi-v1-eventos"
-               value="qjzglvxchaciyaeobyamzexmk"
+               value="ptdesivzbsv"
                data-component="body">
     <br>
-<p>O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres. Example: <code>qjzglvxchaciyaeobyamzexmk</code></p>
+<p>O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres. Example: <code>ptdesivzbsv</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>categoria_evento_id</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="categoria_evento_id"                data-endpoint="GETapi-v1-eventos"
+               value=""
+               data-component="body">
+    <br>
+
         </div>
         </form>
 
@@ -1843,14 +2527,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://test.datime.com.br/api/v1/eventos/9bfd5da9-015f-4497-b293-103b3d3a49c9" \
+    --get "https://test.datime.com.br/api/v1/eventos/9bfefb2c-1bad-4914-b496-354dfa97b00a" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://test.datime.com.br/api/v1/eventos/9bfd5da9-015f-4497-b293-103b3d3a49c9"
+    "https://test.datime.com.br/api/v1/eventos/9bfefb2c-1bad-4914-b496-354dfa97b00a"
 );
 
 const headers = {
@@ -1955,10 +2639,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="id"                data-endpoint="GETapi-v1-eventos--id-"
-               value="9bfd5da9-015f-4497-b293-103b3d3a49c9"
+               value="9bfefb2c-1bad-4914-b496-354dfa97b00a"
                data-component="url">
     <br>
-<p>The ID of the evento. Example: <code>9bfd5da9-015f-4497-b293-103b3d3a49c9</code></p>
+<p>The ID of the evento. Example: <code>9bfefb2c-1bad-4914-b496-354dfa97b00a</code></p>
             </div>
                     </form>
 
@@ -1981,14 +2665,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"nome\": \"qfnpfjvfewjoecmtughiif\",
-    \"descricao\": \"pbamjwfolcpwjgib\",
-    \"data_inicio\": \"2024-05-07T22:41:43\",
-    \"data_fim\": \"2091-04-17\",
-    \"modalidade\": \"presencial\",
-    \"endereco\": \"kfkfsomhdvqhdfvgnw\",
-    \"cep\": \"90844-286\",
-    \"link\": \"http:\\/\\/schneider.com\\/\"
+    \"nome\": \"iyhucmaqzms\",
+    \"descricao\": \"bmxmzbjpfddudgzuhmzrawhvp\",
+    \"data_inicio\": \"2024-05-08T16:22:26\",
+    \"data_fim\": \"2070-06-21\",
+    \"modalidade\": \"online\",
+    \"endereco\": \"wesloni\",
+    \"cep\": \"35692-173\",
+    \"link\": \"http:\\/\\/waters.com\\/\"
 }"
 </code></pre></div>
 
@@ -2005,14 +2689,14 @@ const headers = {
 };
 
 let body = {
-    "nome": "qfnpfjvfewjoecmtughiif",
-    "descricao": "pbamjwfolcpwjgib",
-    "data_inicio": "2024-05-07T22:41:43",
-    "data_fim": "2091-04-17",
-    "modalidade": "presencial",
-    "endereco": "kfkfsomhdvqhdfvgnw",
-    "cep": "90844-286",
-    "link": "http:\/\/schneider.com\/"
+    "nome": "iyhucmaqzms",
+    "descricao": "bmxmzbjpfddudgzuhmzrawhvp",
+    "data_inicio": "2024-05-08T16:22:26",
+    "data_fim": "2070-06-21",
+    "modalidade": "online",
+    "endereco": "wesloni",
+    "cep": "35692-173",
+    "link": "http:\/\/waters.com\/"
 };
 
 fetch(url, {
@@ -2124,10 +2808,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="nome"                data-endpoint="POSTapi-v1-eventos"
-               value="qfnpfjvfewjoecmtughiif"
+               value="iyhucmaqzms"
                data-component="body">
     <br>
-<p>O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres. Example: <code>qfnpfjvfewjoecmtughiif</code></p>
+<p>O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres. Example: <code>iyhucmaqzms</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>descricao</code></b>&nbsp;&nbsp;
@@ -2135,10 +2819,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="descricao"                data-endpoint="POSTapi-v1-eventos"
-               value="pbamjwfolcpwjgib"
+               value="bmxmzbjpfddudgzuhmzrawhvp"
                data-component="body">
     <br>
-<p>O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres. Example: <code>pbamjwfolcpwjgib</code></p>
+<p>O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres. Example: <code>bmxmzbjpfddudgzuhmzrawhvp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>data_inicio</code></b>&nbsp;&nbsp;
@@ -2146,10 +2830,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="data_inicio"                data-endpoint="POSTapi-v1-eventos"
-               value="2024-05-07T22:41:43"
+               value="2024-05-08T16:22:26"
                data-component="body">
     <br>
-<p>O campo value não é uma data válida. Example: <code>2024-05-07T22:41:43</code></p>
+<p>O campo value não é uma data válida. Example: <code>2024-05-08T16:22:26</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>data_fim</code></b>&nbsp;&nbsp;
@@ -2157,10 +2841,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="data_fim"                data-endpoint="POSTapi-v1-eventos"
-               value="2091-04-17"
+               value="2070-06-21"
                data-component="body">
     <br>
-<p>O campo value não é uma data válida. O campo value deve ser uma data posterior a <code>data_inicio</code>. Example: <code>2091-04-17</code></p>
+<p>O campo value não é uma data válida. O campo value deve ser uma data posterior a <code>data_inicio</code>. Example: <code>2070-06-21</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>modalidade</code></b>&nbsp;&nbsp;
@@ -2168,10 +2852,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="modalidade"                data-endpoint="POSTapi-v1-eventos"
-               value="presencial"
+               value="online"
                data-component="body">
     <br>
-<p>Example: <code>presencial</code></p>
+<p>Example: <code>online</code></p>
 Must be one of:
 <ul style="list-style-type: square;"><li><code>presencial</code></li> <li><code>online</code></li> <li><code>hibrido</code></li></ul>
         </div>
@@ -2181,10 +2865,10 @@ Must be one of:
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="endereco"                data-endpoint="POSTapi-v1-eventos"
-               value="kfkfsomhdvqhdfvgnw"
+               value="wesloni"
                data-component="body">
     <br>
-<p>O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres. Example: <code>kfkfsomhdvqhdfvgnw</code></p>
+<p>O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres. Example: <code>wesloni</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>cidade_id</code></b>&nbsp;&nbsp;
@@ -2203,10 +2887,10 @@ Must be one of:
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="cep"                data-endpoint="POSTapi-v1-eventos"
-               value="90844-286"
+               value="35692-173"
                data-component="body">
     <br>
-<p>Must match the regex /\d{5}-\d{3}/. Example: <code>90844-286</code></p>
+<p>Must match the regex /\d{5}-\d{3}/. Example: <code>35692-173</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>link</code></b>&nbsp;&nbsp;
@@ -2214,10 +2898,21 @@ Must be one of:
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="link"                data-endpoint="POSTapi-v1-eventos"
-               value="http://schneider.com/"
+               value="http://waters.com/"
                data-component="body">
     <br>
-<p>Must be a valid URL. Example: <code>http://schneider.com/</code></p>
+<p>Must be a valid URL. Example: <code>http://waters.com/</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>categoria_evento_id</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="categoria_evento_id"                data-endpoint="POSTapi-v1-eventos"
+               value=""
+               data-component="body">
+    <br>
+
         </div>
         </form>
 
@@ -2235,25 +2930,25 @@ Must be one of:
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "https://test.datime.com.br/api/v1/eventos/9bfd5da9-015f-4497-b293-103b3d3a49c9" \
+    "https://test.datime.com.br/api/v1/eventos/9bfefb2c-1bad-4914-b496-354dfa97b00a" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"descricao\": \"wmgpsclmdvahybmnofepw\",
-    \"data_inicio\": \"2024-05-07T22:41:43\",
-    \"data_fim\": \"2087-06-28\",
-    \"online\": true,
-    \"endereco\": \"jmrla\",
-    \"cep\": \"96331-977\",
-    \"link\": \"https:\\/\\/www.dooley.com\\/placeat-dolor-nemo-vitae-voluptatibus-ut\"
+    \"descricao\": \"jfifwkkjrydpqqq\",
+    \"data_inicio\": \"2024-05-08T16:22:26\",
+    \"data_fim\": \"2042-03-17\",
+    \"online\": false,
+    \"endereco\": \"fjeuvkriyuoupkrvipyzzocql\",
+    \"cep\": \"03056-313\",
+    \"link\": \"https:\\/\\/www.ullrich.com\\/atque-facilis-et-repellat-ea-atque\"
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://test.datime.com.br/api/v1/eventos/9bfd5da9-015f-4497-b293-103b3d3a49c9"
+    "https://test.datime.com.br/api/v1/eventos/9bfefb2c-1bad-4914-b496-354dfa97b00a"
 );
 
 const headers = {
@@ -2263,13 +2958,13 @@ const headers = {
 };
 
 let body = {
-    "descricao": "wmgpsclmdvahybmnofepw",
-    "data_inicio": "2024-05-07T22:41:43",
-    "data_fim": "2087-06-28",
-    "online": true,
-    "endereco": "jmrla",
-    "cep": "96331-977",
-    "link": "https:\/\/www.dooley.com\/placeat-dolor-nemo-vitae-voluptatibus-ut"
+    "descricao": "jfifwkkjrydpqqq",
+    "data_inicio": "2024-05-08T16:22:26",
+    "data_fim": "2042-03-17",
+    "online": false,
+    "endereco": "fjeuvkriyuoupkrvipyzzocql",
+    "cep": "03056-313",
+    "link": "https:\/\/www.ullrich.com\/atque-facilis-et-repellat-ea-atque"
 };
 
 fetch(url, {
@@ -2381,10 +3076,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="id"                data-endpoint="PUTapi-v1-eventos--id-"
-               value="9bfd5da9-015f-4497-b293-103b3d3a49c9"
+               value="9bfefb2c-1bad-4914-b496-354dfa97b00a"
                data-component="url">
     <br>
-<p>The ID of the evento. Example: <code>9bfd5da9-015f-4497-b293-103b3d3a49c9</code></p>
+<p>The ID of the evento. Example: <code>9bfefb2c-1bad-4914-b496-354dfa97b00a</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -2404,10 +3099,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="descricao"                data-endpoint="PUTapi-v1-eventos--id-"
-               value="wmgpsclmdvahybmnofepw"
+               value="jfifwkkjrydpqqq"
                data-component="body">
     <br>
-<p>O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres. Example: <code>wmgpsclmdvahybmnofepw</code></p>
+<p>O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres. Example: <code>jfifwkkjrydpqqq</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>data_inicio</code></b>&nbsp;&nbsp;
@@ -2415,10 +3110,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="data_inicio"                data-endpoint="PUTapi-v1-eventos--id-"
-               value="2024-05-07T22:41:43"
+               value="2024-05-08T16:22:26"
                data-component="body">
     <br>
-<p>O campo value não é uma data válida. Example: <code>2024-05-07T22:41:43</code></p>
+<p>O campo value não é uma data válida. Example: <code>2024-05-08T16:22:26</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>data_fim</code></b>&nbsp;&nbsp;
@@ -2426,10 +3121,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="data_fim"                data-endpoint="PUTapi-v1-eventos--id-"
-               value="2087-06-28"
+               value="2042-03-17"
                data-component="body">
     <br>
-<p>O campo value não é uma data válida. O campo value deve ser uma data posterior a <code>data_inicio</code>. Example: <code>2087-06-28</code></p>
+<p>O campo value não é uma data válida. O campo value deve ser uma data posterior a <code>data_inicio</code>. Example: <code>2042-03-17</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>online</code></b>&nbsp;&nbsp;
@@ -2450,7 +3145,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <code>false</code>
         </label>
     <br>
-<p>Example: <code>true</code></p>
+<p>Example: <code>false</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>endereco</code></b>&nbsp;&nbsp;
@@ -2458,10 +3153,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="endereco"                data-endpoint="PUTapi-v1-eventos--id-"
-               value="jmrla"
+               value="fjeuvkriyuoupkrvipyzzocql"
                data-component="body">
     <br>
-<p>O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres. Example: <code>jmrla</code></p>
+<p>O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres. Example: <code>fjeuvkriyuoupkrvipyzzocql</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>cidade_id</code></b>&nbsp;&nbsp;
@@ -2480,10 +3175,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="cep"                data-endpoint="PUTapi-v1-eventos--id-"
-               value="96331-977"
+               value="03056-313"
                data-component="body">
     <br>
-<p>Must match the regex /\d{5}-\d{3}/. Example: <code>96331-977</code></p>
+<p>Must match the regex /\d{5}-\d{3}/. Example: <code>03056-313</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>link</code></b>&nbsp;&nbsp;
@@ -2491,10 +3186,21 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="link"                data-endpoint="PUTapi-v1-eventos--id-"
-               value="https://www.dooley.com/placeat-dolor-nemo-vitae-voluptatibus-ut"
+               value="https://www.ullrich.com/atque-facilis-et-repellat-ea-atque"
                data-component="body">
     <br>
-<p>Must be a valid URL. Example: <code>https://www.dooley.com/placeat-dolor-nemo-vitae-voluptatibus-ut</code></p>
+<p>Must be a valid URL. Example: <code>https://www.ullrich.com/atque-facilis-et-repellat-ea-atque</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>categoria_evento_id</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="categoria_evento_id"                data-endpoint="PUTapi-v1-eventos--id-"
+               value=""
+               data-component="body">
+    <br>
+
         </div>
         </form>
 
@@ -2512,7 +3218,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request DELETE \
-    "https://test.datime.com.br/api/v1/eventos/9bfd5da9-015f-4497-b293-103b3d3a49c9" \
+    "https://test.datime.com.br/api/v1/eventos/9bfefb2c-1bad-4914-b496-354dfa97b00a" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -2520,7 +3226,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://test.datime.com.br/api/v1/eventos/9bfd5da9-015f-4497-b293-103b3d3a49c9"
+    "https://test.datime.com.br/api/v1/eventos/9bfefb2c-1bad-4914-b496-354dfa97b00a"
 );
 
 const headers = {
@@ -2634,10 +3340,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="id"                data-endpoint="DELETEapi-v1-eventos--id-"
-               value="9bfd5da9-015f-4497-b293-103b3d3a49c9"
+               value="9bfefb2c-1bad-4914-b496-354dfa97b00a"
                data-component="url">
     <br>
-<p>The ID of the evento. Example: <code>9bfd5da9-015f-4497-b293-103b3d3a49c9</code></p>
+<p>The ID of the evento. Example: <code>9bfefb2c-1bad-4914-b496-354dfa97b00a</code></p>
             </div>
                     </form>
 
@@ -2664,9 +3370,9 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"page\": 69,
-    \"per_page\": 24,
-    \"search\": \"rantgavasjt\"
+    \"page\": 74,
+    \"per_page\": 8,
+    \"search\": \"dhnzktpxwxvdtocto\"
 }"
 </code></pre></div>
 
@@ -2683,9 +3389,9 @@ const headers = {
 };
 
 let body = {
-    "page": 69,
-    "per_page": 24,
-    "search": "rantgavasjt"
+    "page": 74,
+    "per_page": 8,
+    "search": "dhnzktpxwxvdtocto"
 };
 
 fetch(url, {
@@ -2800,10 +3506,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="page"                data-endpoint="GETapi-v1-manage-users"
-               value="69"
+               value="74"
                data-component="body">
     <br>
-<p>O campo value deve ser pelo menos 1. Example: <code>69</code></p>
+<p>O campo value deve ser pelo menos 1. Example: <code>74</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>per_page</code></b>&nbsp;&nbsp;
@@ -2811,10 +3517,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="per_page"                data-endpoint="GETapi-v1-manage-users"
-               value="24"
+               value="8"
                data-component="body">
     <br>
-<p>O campo value deve ser pelo menos 1. O campo value não pode ser superior a 300. Example: <code>24</code></p>
+<p>O campo value deve ser pelo menos 1. O campo value não pode ser superior a 300. Example: <code>8</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>search</code></b>&nbsp;&nbsp;
@@ -2822,10 +3528,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="search"                data-endpoint="GETapi-v1-manage-users"
-               value="rantgavasjt"
+               value="dhnzktpxwxvdtocto"
                data-component="body">
     <br>
-<p>O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres. Example: <code>rantgavasjt</code></p>
+<p>O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres. Example: <code>dhnzktpxwxvdtocto</code></p>
         </div>
         </form>
 
@@ -2843,7 +3549,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://test.datime.com.br/api/v1/manage/users/9bfd5da8-e970-4351-b50b-802e9bdea090" \
+    --get "https://test.datime.com.br/api/v1/manage/users/9bfefb28-3d69-424b-b9ce-b61df8c7a629" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -2851,7 +3557,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://test.datime.com.br/api/v1/manage/users/9bfd5da8-e970-4351-b50b-802e9bdea090"
+    "https://test.datime.com.br/api/v1/manage/users/9bfefb28-3d69-424b-b9ce-b61df8c7a629"
 );
 
 const headers = {
@@ -2968,10 +3674,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="id"                data-endpoint="GETapi-v1-manage-users--id-"
-               value="9bfd5da8-e970-4351-b50b-802e9bdea090"
+               value="9bfefb28-3d69-424b-b9ce-b61df8c7a629"
                data-component="url">
     <br>
-<p>The ID of the user. Example: <code>9bfd5da8-e970-4351-b50b-802e9bdea090</code></p>
+<p>The ID of the user. Example: <code>9bfefb28-3d69-424b-b9ce-b61df8c7a629</code></p>
             </div>
                     </form>
 
@@ -2994,8 +3700,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"k\",
-    \"email\": \"elliot.brakus@example.com\"
+    \"name\": \"zycpfwwkjvhxutywkkrkus\",
+    \"email\": \"giovani.oconner@example.org\"
 }"
 </code></pre></div>
 
@@ -3012,8 +3718,8 @@ const headers = {
 };
 
 let body = {
-    "name": "k",
-    "email": "elliot.brakus@example.com"
+    "name": "zycpfwwkjvhxutywkkrkus",
+    "email": "giovani.oconner@example.org"
 };
 
 fetch(url, {
@@ -3125,10 +3831,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="POSTapi-v1-manage-users"
-               value="k"
+               value="zycpfwwkjvhxutywkkrkus"
                data-component="body">
     <br>
-<p>O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres. Example: <code>k</code></p>
+<p>O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres. Example: <code>zycpfwwkjvhxutywkkrkus</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
@@ -3136,10 +3842,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTapi-v1-manage-users"
-               value="elliot.brakus@example.com"
+               value="giovani.oconner@example.org"
                data-component="body">
     <br>
-<p>O campo value deve ser um endereço de e-mail válido. Example: <code>elliot.brakus@example.com</code></p>
+<p>O campo value deve ser um endereço de e-mail válido. Example: <code>giovani.oconner@example.org</code></p>
         </div>
         </form>
 
@@ -3157,19 +3863,19 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request PUT \
-    "https://test.datime.com.br/api/v1/manage/users/9bfd5da8-e970-4351-b50b-802e9bdea090" \
+    "https://test.datime.com.br/api/v1/manage/users/9bfefb28-3d69-424b-b9ce-b61df8c7a629" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"is_active\": true
+    \"is_active\": false
 }"
 </code></pre></div>
 
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://test.datime.com.br/api/v1/manage/users/9bfd5da8-e970-4351-b50b-802e9bdea090"
+    "https://test.datime.com.br/api/v1/manage/users/9bfefb28-3d69-424b-b9ce-b61df8c7a629"
 );
 
 const headers = {
@@ -3179,7 +3885,7 @@ const headers = {
 };
 
 let body = {
-    "is_active": true
+    "is_active": false
 };
 
 fetch(url, {
@@ -3288,10 +3994,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="id"                data-endpoint="PUTapi-v1-manage-users--id-"
-               value="9bfd5da8-e970-4351-b50b-802e9bdea090"
+               value="9bfefb28-3d69-424b-b9ce-b61df8c7a629"
                data-component="url">
     <br>
-<p>The ID of the user. Example: <code>9bfd5da8-e970-4351-b50b-802e9bdea090</code></p>
+<p>The ID of the user. Example: <code>9bfefb28-3d69-424b-b9ce-b61df8c7a629</code></p>
             </div>
                             <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
         <div style=" padding-left: 28px;  clear: unset;">
@@ -3324,7 +4030,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             <code>false</code>
         </label>
     <br>
-<p>Example: <code>true</code></p>
+<p>Example: <code>false</code></p>
         </div>
         </form>
 
@@ -3342,7 +4048,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request POST \
-    "https://test.datime.com.br/api/v1/manage/users/9bfd5da8-e970-4351-b50b-802e9bdea090/new-temp-password" \
+    "https://test.datime.com.br/api/v1/manage/users/9bfefb28-3d69-424b-b9ce-b61df8c7a629/new-temp-password" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -3350,7 +4056,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://test.datime.com.br/api/v1/manage/users/9bfd5da8-e970-4351-b50b-802e9bdea090/new-temp-password"
+    "https://test.datime.com.br/api/v1/manage/users/9bfefb28-3d69-424b-b9ce-b61df8c7a629/new-temp-password"
 );
 
 const headers = {
@@ -3464,10 +4170,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="user_id"                data-endpoint="POSTapi-v1-manage-users--user_id--new-temp-password"
-               value="9bfd5da8-e970-4351-b50b-802e9bdea090"
+               value="9bfefb28-3d69-424b-b9ce-b61df8c7a629"
                data-component="url">
     <br>
-<p>The ID of the user. Example: <code>9bfd5da8-e970-4351-b50b-802e9bdea090</code></p>
+<p>The ID of the user. Example: <code>9bfefb28-3d69-424b-b9ce-b61df8c7a629</code></p>
             </div>
                     </form>
 
@@ -3492,9 +4198,9 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"evento_id\": \"pariatur\",
-    \"nome\": \"yvtt\",
-    \"cpf\": \"nqjrqbtv\"
+    \"evento_id\": \"reprehenderit\",
+    \"nome\": \"koizctwerljzhikms\",
+    \"cpf\": \"rjoqy\"
 }"
 </code></pre></div>
 
@@ -3510,9 +4216,9 @@ const headers = {
 };
 
 let body = {
-    "evento_id": "pariatur",
-    "nome": "yvtt",
-    "cpf": "nqjrqbtv"
+    "evento_id": "reprehenderit",
+    "nome": "koizctwerljzhikms",
+    "cpf": "rjoqy"
 };
 
 fetch(url, {
@@ -3613,10 +4319,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="evento_id"                data-endpoint="POSTapi-v1-inscricoes"
-               value="pariatur"
+               value="reprehenderit"
                data-component="body">
     <br>
-<p>Example: <code>pariatur</code></p>
+<p>Example: <code>reprehenderit</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>nome</code></b>&nbsp;&nbsp;
@@ -3624,10 +4330,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="nome"                data-endpoint="POSTapi-v1-inscricoes"
-               value="yvtt"
+               value="koizctwerljzhikms"
                data-component="body">
     <br>
-<p>O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres. Example: <code>yvtt</code></p>
+<p>O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres. Example: <code>koizctwerljzhikms</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
@@ -3646,10 +4352,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="cpf"                data-endpoint="POSTapi-v1-inscricoes"
-               value="nqjrqbtv"
+               value="rjoqy"
                data-component="body">
     <br>
-<p>O campo value deve ter pelo menos 11 caracteres. O campo value não pode ser superior a 14 caracteres. Example: <code>nqjrqbtv</code></p>
+<p>O campo value deve ter pelo menos 11 caracteres. O campo value não pode ser superior a 14 caracteres. Example: <code>rjoqy</code></p>
         </div>
         </form>
 
@@ -3672,9 +4378,9 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"page\": 22,
-    \"per_page\": 11,
-    \"search\": \"biskgegiexdlb\"
+    \"page\": 35,
+    \"per_page\": 14,
+    \"search\": \"vmoxedwpuhqfcwztrmt\"
 }"
 </code></pre></div>
 
@@ -3691,9 +4397,9 @@ const headers = {
 };
 
 let body = {
-    "page": 22,
-    "per_page": 11,
-    "search": "biskgegiexdlb"
+    "page": 35,
+    "per_page": 14,
+    "search": "vmoxedwpuhqfcwztrmt"
 };
 
 fetch(url, {
@@ -3808,10 +4514,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="page"                data-endpoint="GETapi-v1-inscricoes"
-               value="22"
+               value="35"
                data-component="body">
     <br>
-<p>O campo value deve ser pelo menos 1. Example: <code>22</code></p>
+<p>O campo value deve ser pelo menos 1. Example: <code>35</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>per_page</code></b>&nbsp;&nbsp;
@@ -3819,10 +4525,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="number" style="display: none"
                step="any"               name="per_page"                data-endpoint="GETapi-v1-inscricoes"
-               value="11"
+               value="14"
                data-component="body">
     <br>
-<p>O campo value deve ser pelo menos 1. O campo value não pode ser superior a 300. Example: <code>11</code></p>
+<p>O campo value deve ser pelo menos 1. O campo value não pode ser superior a 300. Example: <code>14</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>search</code></b>&nbsp;&nbsp;
@@ -3830,10 +4536,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <i>optional</i> &nbsp;
                 <input type="text" style="display: none"
                               name="search"                data-endpoint="GETapi-v1-inscricoes"
-               value="biskgegiexdlb"
+               value="vmoxedwpuhqfcwztrmt"
                data-component="body">
     <br>
-<p>O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres. Example: <code>biskgegiexdlb</code></p>
+<p>O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres. Example: <code>vmoxedwpuhqfcwztrmt</code></p>
         </div>
         </form>
 
@@ -3851,7 +4557,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="bash-example">
     <pre><code class="language-bash">curl --request GET \
-    --get "https://test.datime.com.br/api/v1/inscricoes/9bfd5db1-a0e2-4928-8c19-a70612ea0305" \
+    --get "https://test.datime.com.br/api/v1/inscricoes/9bfefb3f-9cd2-45d0-88ba-7a5dded0fd7f" \
     --header "Authorization: Bearer {YOUR_AUTH_KEY}" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -3859,7 +4565,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
 <div class="javascript-example">
     <pre><code class="language-javascript">const url = new URL(
-    "https://test.datime.com.br/api/v1/inscricoes/9bfd5db1-a0e2-4928-8c19-a70612ea0305"
+    "https://test.datime.com.br/api/v1/inscricoes/9bfefb3f-9cd2-45d0-88ba-7a5dded0fd7f"
 );
 
 const headers = {
@@ -3976,10 +4682,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="inscricao_id"                data-endpoint="GETapi-v1-inscricoes--inscricao_id-"
-               value="9bfd5db1-a0e2-4928-8c19-a70612ea0305"
+               value="9bfefb3f-9cd2-45d0-88ba-7a5dded0fd7f"
                data-component="url">
     <br>
-<p>The ID of the inscricao. Example: <code>9bfd5db1-a0e2-4928-8c19-a70612ea0305</code></p>
+<p>The ID of the inscricao. Example: <code>9bfefb3f-9cd2-45d0-88ba-7a5dded0fd7f</code></p>
             </div>
                     </form>
 

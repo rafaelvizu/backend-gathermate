@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Despesa extends Model
 {
@@ -17,7 +18,7 @@ class Despesa extends Model
         'valor_total',
         'valor_pago',
         'pago',
-        'categoria_id',
+        'categoria_despesa_id',
         'evento_id',
     ];
 
@@ -27,4 +28,9 @@ class Despesa extends Model
         'valor_pago' => 'float',
         'pago' => 'boolean',
     ];
+
+    public function categoriaDespesa(): BelongsTo
+    {
+        return $this->belongsTo(CategoriaDespesa::class);
+    }
 }

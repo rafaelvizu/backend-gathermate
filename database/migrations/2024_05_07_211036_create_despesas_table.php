@@ -21,10 +21,10 @@ return new class extends Migration
             $table->decimal('valor_pago', 10, 2);
             $table->boolean('pago');
 
-            $table->foreignUuid('categoria_id')
-                ->constrained('categorias')
-                ->onDelete('set null')
-                ->onUpdate('cascate');
+            $table->foreignUuid('categoria_despesa_id')
+                ->constrained('categoria_despesas')
+                ->cascadeOnDelete()
+                ->cascadeOnUpdate();
 
             $table->foreignUuid('evento_id')
                 ->constrained('eventos')

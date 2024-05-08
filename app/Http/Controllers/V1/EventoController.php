@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\V1;
 
 use App\Http\Controllers\Controller;
+use App\Models\CategoriaEvento;
 use App\Models\Evento;
 use App\Models\Cidade;
 use Illuminate\Http\JsonResponse;
@@ -26,7 +27,7 @@ class EventoController extends Controller
             'page' => 'integer|min:1',
             'per_page' => 'integer|min:1|max:300',
             'search' => 'nullable|string|min:3|max:50',
-            'categoria_evento_id' => 'nullable|in:categorias_eventos,id',
+            'categoria_evento_id' => 'nullable|exists:categoria_eventos,id',
         ]);
 
         $eventos = Evento::when($request->search, function ($query, $search) {
@@ -66,7 +67,7 @@ class EventoController extends Controller
             'cidade_id' => 'nullable|in:' . Cidade::pluck('id')->implode(','),
             'cep' => 'nullable|regex:/\d{5}-\d{3}/',
             'link' => 'nullable|url',
-            'categoria_evento_id' => 'required|in:categorias_eventos,id',
+            'categoria_evento_id' => 'nullable|exists:categoria_eventos,id',
         ]);
 
         $cidade = Cidade::find($request->cidade);
@@ -135,7 +136,7 @@ class EventoController extends Controller
             'cidade_id' => 'nullable|in:' . Cidade::pluck('id')->implode(','),
             'cep' => 'nullable|regex:/\d{5}-\d{3}/',
             'link' => 'nullable|url',
-            'categoria_evento_id' => 'required|in:categorias_eventos,id',
+            'categoria_evento_id' => 'nullable|exists:categoria_eventos,id',
         ]);
 
         $cidade = Cidade::find($request->cidade);

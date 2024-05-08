@@ -18,6 +18,26 @@ class DespesaController extends Controller
     public function index(Request $request)
     {
         //
+        $request->validate([
+            'evento_id' => 'required|exists:eventos,id',
+            'categoria_despesa_id' => 'nullable|exists:categoria_despesas,id',
+            'page' => 'integer|min:1',
+            'per_page' => 'integer|min:1|max:300',
+        ]);
+
+        $despesas = Despesa::when($request->categoria_despesa_id, function ($query, $categoria_despesa_id) {
+            return $query->where('categoria_id', $categoria_despesa_id);
+        })
+            ->where('evento_id', $request->evento_id)
+            ->paginate($request->per_page, ['*'], 'page', $request->page);
+
+        return response()->json([
+            'data' => $despesas->items(),
+            'message' => 'Sucesso!',
+            'current_page' => $despesas->currentPage(),
+            'per_page' => $despesas->perPage(),
+            'total' => $despesas->total(),
+        ]);
     }
 
 
