@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CidadeController;
+use App\Http\Controllers\V1\CategoriaDespesaController;
 use App\Http\Controllers\V1\EventoController;
 use App\Http\Controllers\V1\InscricaoController;
 use App\Http\Controllers\V1\ManageUser;
@@ -90,6 +91,16 @@ Route::prefix('v1')->group(function () {
     });
 
 
+    Route::middleware(['auth:sanctum'])->prefix('categorias-despesa')->group(function () {
+        Route::get('/', [CategoriaDespesaController::class, 'index'])
+            ->name('v1.categorias-despesa.index');
+
+        Route::post('/', [CategoriaDespesaController::class, 'store'])
+            ->name('v1.categorias-despesa.store');
+
+        Route::put('/{categoriaDespesa}', [CategoriaDespesaController::class, 'update'])
+            ->name('v1.categorias-despesa.update');
+    });
 
 });
 
