@@ -3,6 +3,7 @@
 use App\Http\Controllers\CidadeController;
 use App\Http\Controllers\V1\CategoriaDespesaController;
 use App\Http\Controllers\V1\CategoriaEventoController;
+use App\Http\Controllers\V1\DespesaController;
 use App\Http\Controllers\V1\EventoController;
 use App\Http\Controllers\V1\InscricaoController;
 use App\Http\Controllers\V1\ManageUser;
@@ -119,6 +120,24 @@ Route::prefix('v1')->group(function () {
 
         });
 
+
+    });
+
+    Route::middleware('auth:sanctum')->prefix('despesas')->group(function () {
+        Route::get('/', [DespesaController::class, 'index'])
+            ->name('v1.despesas.index');
+
+        Route::get('/{despesa}', [DespesaController::class, 'show'])
+            ->name('v1.despesas.show');
+
+        Route::post('/', [DespesaController::class, 'store'])
+            ->name('v1.despesas.store');
+
+        Route::put('/{despesa}', [DespesaController::class, 'update'])
+            ->name('v1.despesas.update');
+
+        Route::delete('/{despesa}', [DespesaController::class, 'destroy'])
+            ->name('v1.despesas.destroy');
 
     });
 

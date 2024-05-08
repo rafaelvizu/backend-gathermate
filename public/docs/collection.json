@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "API Documentation",
-        "_postman_id": "31c0ba0c-ec16-4f86-a3ab-f722961cf2cb",
+        "_postman_id": "7746b996-6bcf-47bf-8ea5-f9cf736a9728",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"juston.swaniawski@example.org\",\"password\":\"reiciendis\"}"
+                            "raw": "{\"email\":\"okeefe.sebastian@example.net\",\"password\":\"eveniet\"}"
                         },
                         "description": "",
                         "auth": {
@@ -143,7 +143,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"password\":\"D`COu+S33Ddr?3V:DXk\",\"old_password\":\"sgamjifuagqewcwluuzu\"}"
+                            "raw": "{\"password\":\"cAg89Ylx'D2&\",\"old_password\":\"hexwbuozpbislfqjexbzmytv\"}"
                         },
                         "description": ""
                     },
@@ -219,7 +219,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"page\":84,\"per_page\":21,\"search\":\"tlufwuattanrwbxxi\"}"
+                            "raw": "{\"page\":52,\"per_page\":14,\"search\":\"ekqfebuvallocltglbn\"}"
                         },
                         "description": ""
                     },
@@ -254,7 +254,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"nome\":\"vhpeqbdgdqidtdkcu\",\"descricao\":\"zonkmg\"}"
+                            "raw": "{\"nome\":\"szpozyprflvaxwfyhotgmuxxs\",\"descricao\":\"yfrclchoxzonffrugntevskl\"}"
                         },
                         "description": ""
                     },
@@ -297,7 +297,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"nome\":\"lpcwcbnnsolohgsgcglcfbk\",\"descricao\":\"keuhq\"}"
+                            "raw": "{\"nome\":\"rrlwcuwfwrx\",\"descricao\":\"djhwovt\"}"
                         },
                         "description": ""
                     },
@@ -338,7 +338,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"page\":24,\"per_page\":23,\"search\":\"eejqtugjw\"}"
+                            "raw": "{\"page\":85,\"per_page\":11,\"search\":\"srpmjecfigw\"}"
                         },
                         "description": "",
                         "auth": {
@@ -419,7 +419,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"nome\":\"ngizxoafijja\",\"descricao\":\"xqtkelknj\"}"
+                            "raw": "{\"nome\":\"o\",\"descricao\":\"muyrthngf\"}"
                         },
                         "description": ""
                     },
@@ -462,7 +462,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"nome\":\"spk\",\"descricao\":\"naj\"}"
+                            "raw": "{\"nome\":\"gpkwynqdmnpmzjnzqwgrtwkyf\",\"descricao\":\"ngu\"}"
                         },
                         "description": ""
                     },
@@ -471,6 +471,208 @@
                             "header": [],
                             "code": 200,
                             "body": "{\"data\":[\"categoria_eventos\"],\"message\":\"Sucesso!\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Despesas",
+            "description": "",
+            "item": [
+                {
+                    "name": "GET api\/v1\/despesas",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/despesas",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/despesas"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"evento_id\":\"nisi\",\"page\":69,\"per_page\":2}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":[\"despesa\"],\"message\":\"Sucesso!\",\"current_page\":1,\"per_page\":15,\"total\":1}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "GET api\/v1\/despesas\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/despesas\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/despesas\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "9bfefdca-1bff-43e2-8352-545a4e053045",
+                                    "description": "The ID of the despesa."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":[\"despesa\"],\"message\":\"Sucesso!\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "POST api\/v1\/despesas",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/despesas",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/despesas"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"descricao\":\"k\",\"valor_unidade\":38,\"quantidade\":59,\"categoria_id\":\"cumque\",\"evento_id\":\"id\"}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 201,
+                            "body": "{\"data\":[\"despesa\"],\"message\":\"Sucesso!\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "PUT api\/v1\/despesas\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/despesas\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/despesas\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "9bfefdca-1bff-43e2-8352-545a4e053045",
+                                    "description": "The ID of the despesa."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"descricao\":\"mbfupevecgqbjw\",\"valor_unidade\":14,\"quantidade\":75,\"categoria_id\":\"et\",\"evento_id\":\"voluptatibus\"}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":[\"despesa\"],\"message\":\"Sucesso!\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "DELETE api\/v1\/despesas\/{id}",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/despesas\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/despesas\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "9bfefdca-1bff-43e2-8352-545a4e053045",
+                                    "description": "The ID of the despesa."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"message\":\"Sucesso!\"}",
                             "name": ""
                         }
                     ]
@@ -503,7 +705,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"search\":\"nihil\",\"per_page\":11,\"page\":2}"
+                            "raw": "{\"search\":\"voluptatibus\",\"per_page\":18,\"page\":8}"
                         },
                         "description": ""
                     },
@@ -544,7 +746,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"page\":53,\"per_page\":12,\"search\":\"ptdesivzbsv\"}"
+                            "raw": "{\"page\":45,\"per_page\":9,\"search\":\"qajehdukv\"}"
                         },
                         "description": "",
                         "auth": {
@@ -625,7 +827,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"nome\":\"iyhucmaqzms\",\"descricao\":\"bmxmzbjpfddudgzuhmzrawhvp\",\"data_inicio\":\"2024-05-08T16:22:26\",\"data_fim\":\"2070-06-21\",\"modalidade\":\"online\",\"endereco\":\"wesloni\",\"cep\":\"35692-173\",\"link\":\"http:\\\/\\\/waters.com\\\/\"}"
+                            "raw": "{\"nome\":\"svrvcxszrfiqsb\",\"descricao\":\"bhupmqcybuvedjkhfhpuxf\",\"data_inicio\":\"2024-05-08T16:30:51\",\"data_fim\":\"2051-07-13\",\"modalidade\":\"online\",\"endereco\":\"pxhawjtojhhv\",\"cep\":\"24931-656\",\"link\":\"http:\\\/\\\/www.schuppe.com\\\/velit-dolorem-odio-id-repellat-eveniet-a-voluptatibus\"}"
                         },
                         "description": ""
                     },
@@ -668,7 +870,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"descricao\":\"jfifwkkjrydpqqq\",\"data_inicio\":\"2024-05-08T16:22:26\",\"data_fim\":\"2042-03-17\",\"online\":false,\"endereco\":\"fjeuvkriyuoupkrvipyzzocql\",\"cep\":\"03056-313\",\"link\":\"https:\\\/\\\/www.ullrich.com\\\/atque-facilis-et-repellat-ea-atque\"}"
+                            "raw": "{\"descricao\":\"lndqciif\",\"data_inicio\":\"2024-05-08T16:30:51\",\"data_fim\":\"2046-11-17\",\"online\":true,\"endereco\":\"aofhxgrkgtwgow\",\"cep\":\"21705-000\",\"link\":\"https:\\\/\\\/www.upton.com\\\/aut-mollitia-odit-minima-vel-officiis\"}"
                         },
                         "description": ""
                     },
@@ -749,7 +951,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"page\":74,\"per_page\":8,\"search\":\"dhnzktpxwxvdtocto\"}"
+                            "raw": "{\"page\":63,\"per_page\":6,\"search\":\"okaynl\"}"
                         },
                         "description": ""
                     },
@@ -824,7 +1026,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"zycpfwwkjvhxutywkkrkus\",\"email\":\"giovani.oconner@example.org\"}"
+                            "raw": "{\"name\":\"rarpzidkscqyeqphwjbpbrqs\",\"email\":\"rashawn.lueilwitz@example.net\"}"
                         },
                         "description": ""
                     },
@@ -948,7 +1150,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"evento_id\":\"reprehenderit\",\"nome\":\"koizctwerljzhikms\",\"cpf\":\"rjoqy\"}"
+                            "raw": "{\"evento_id\":\"quia\",\"nome\":\"euyrhwgjuclyr\",\"cpf\":\"sztsbevavaghz\"}"
                         },
                         "description": "",
                         "auth": {
@@ -986,7 +1188,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"page\":35,\"per_page\":14,\"search\":\"vmoxedwpuhqfcwztrmt\"}"
+                            "raw": "{\"page\":30,\"per_page\":13,\"search\":\"enpdtzryvvhbllsmbqo\"}"
                         },
                         "description": ""
                     },

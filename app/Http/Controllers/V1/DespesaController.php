@@ -12,9 +12,10 @@ use Knuckles\Scribe\Attributes\Response;
 
 class DespesaController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+
+    #[Group(name: 'Despesas')]
+    #[Response(content: ['data' => ['despesa'], 'message' => 'Sucesso!', 'current_page' => 1, 'per_page' => 15, 'total' => 1], status: 200)]
+    #[Authenticated]
     public function index(Request $request)
     {
         //
