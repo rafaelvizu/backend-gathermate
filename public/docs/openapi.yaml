@@ -46,11 +46,11 @@ paths:
                 email:
                   type: string
                   description: 'O campo value deve ser um endereço de e-mail válido.'
-                  example: deonte.swaniawski@example.net
+                  example: darius.klein@example.net
                 password:
                   type: string
                   description: ''
-                  example: numquam
+                  example: porro
               required:
                 - email
                 - password
@@ -136,11 +136,11 @@ paths:
                 password:
                   type: string
                   description: 'O campo value deve ter pelo menos 6 caracteres. O campo value não pode ser superior a 255 caracteres.'
-                  example: G<Re-Y-N~Q
+                  example: "'!8sU]hl@`D"
                 old_password:
                   type: string
                   description: 'O campo value deve ter pelo menos 6 caracteres. O campo value não pode ser superior a 255 caracteres.'
-                  example: ukzxsjdsemvnw
+                  example: wlifjddmznpgxbqquctheaife
               required:
                 - password
                 - old_password
@@ -176,6 +176,168 @@ paths:
                   type: string
                   description: ''
                   example: null
+  /api/v1/categorias-despesa:
+    get:
+      summary: ''
+      operationId: getApiV1CategoriasDespesa
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    - categoria_despesa
+                  message: Sucesso!
+                  current_page: 1
+                  per_page: 15
+                  total: 1
+                properties:
+                  data:
+                    type: array
+                    example:
+                      - categoria_despesa
+                    items:
+                      type: string
+                  message:
+                    type: string
+                    example: Sucesso!
+                  current_page:
+                    type: integer
+                    example: 1
+                  per_page:
+                    type: integer
+                    example: 15
+                  total:
+                    type: integer
+                    example: 1
+      tags:
+        - 'Categorias de despesas'
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                page:
+                  type: integer
+                  description: 'O campo value deve ser pelo menos 1.'
+                  example: 15
+                per_page:
+                  type: integer
+                  description: 'O campo value deve ser pelo menos 1. O campo value não pode ser superior a 300.'
+                  example: 19
+                search:
+                  type: string
+                  description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres.'
+                  example: sytz
+    post:
+      summary: ''
+      operationId: postApiV1CategoriasDespesa
+      description: ''
+      parameters: []
+      responses:
+        201:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    - categoria_despesa
+                  message: Sucesso!
+                properties:
+                  data:
+                    type: array
+                    example:
+                      - categoria_despesa
+                    items:
+                      type: string
+                  message:
+                    type: string
+                    example: Sucesso!
+      tags:
+        - 'Categorias de despesas'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nome:
+                  type: string
+                  description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 100 caracteres.'
+                  example: e
+                descricao:
+                  type: string
+                  description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 1000 caracteres.'
+                  example: bsfacrxntjxkoymuvmdphfwzx
+              required:
+                - nome
+                - descricao
+  '/api/v1/categorias-despesa/{categoriaDespesa_id}':
+    put:
+      summary: ''
+      operationId: putApiV1CategoriasDespesaCategoriaDespesa_id
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  data:
+                    - categoria_despesa
+                  message: Sucesso!
+                properties:
+                  data:
+                    type: array
+                    example:
+                      - categoria_despesa
+                    items:
+                      type: string
+                  message:
+                    type: string
+                    example: Sucesso!
+      tags:
+        - 'Categorias de despesas'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nome:
+                  type: string
+                  description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 100 caracteres.'
+                  example: ucojfzpnkh
+                descricao:
+                  type: string
+                  description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 1000 caracteres.'
+                  example: idr
+              required:
+                - nome
+                - descricao
+    parameters:
+      -
+        in: path
+        name: categoriaDespesa_id
+        description: 'The ID of the categoriaDespesa.'
+        example: voluptatem
+        required: true
+        schema:
+          type: string
   /api/v1/dict/cidades:
     get:
       summary: ''
@@ -215,11 +377,11 @@ paths:
                 search:
                   type: string
                   description: ''
-                  example: sint
+                  example: labore
                 per_page:
                   type: integer
                   description: ''
-                  example: 8
+                  example: 19
                 page:
                   type: integer
                   description: ''
@@ -275,15 +437,15 @@ paths:
                 page:
                   type: integer
                   description: 'O campo value deve ser pelo menos 1.'
-                  example: 36
+                  example: 41
                 per_page:
                   type: integer
                   description: 'O campo value deve ser pelo menos 1. O campo value não pode ser superior a 300.'
-                  example: 14
+                  example: 6
                 search:
                   type: string
                   description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres.'
-                  example: pdaarej
+                  example: qjzglvxchaciyaeobyamzexmk
       security: []
     post:
       summary: ''
@@ -323,23 +485,23 @@ paths:
                 nome:
                   type: string
                   description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres.'
-                  example: lworrgdtbqadhdivkwcmwbwa
+                  example: qfnpfjvfewjoecmtughiif
                 descricao:
                   type: string
                   description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres.'
-                  example: igrd
+                  example: pbamjwfolcpwjgib
                 data_inicio:
                   type: string
                   description: 'O campo value não é uma data válida.'
-                  example: '2024-05-07T20:07:08'
+                  example: '2024-05-07T22:41:43'
                 data_fim:
                   type: string
                   description: 'O campo value não é uma data válida. O campo value deve ser uma data posterior a <code>data_inicio</code>.'
-                  example: '2096-06-13'
+                  example: '2091-04-17'
                 modalidade:
                   type: string
                   description: ''
-                  example: hibrido
+                  example: presencial
                   enum:
                     - presencial
                     - online
@@ -347,7 +509,7 @@ paths:
                 endereco:
                   type: string
                   description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres.'
-                  example: qtgdepswvvqn
+                  example: kfkfsomhdvqhdfvgnw
                 cidade_id:
                   type: string
                   description: ''
@@ -355,11 +517,11 @@ paths:
                 cep:
                   type: string
                   description: 'Must match the regex /\d{5}-\d{3}/.'
-                  example: 48924-395
+                  example: 90844-286
                 link:
                   type: string
                   description: 'Must be a valid URL.'
-                  example: 'http://torphy.biz/'
+                  example: 'http://schneider.com/'
               required:
                 - nome
                 - descricao
@@ -437,15 +599,15 @@ paths:
                 descricao:
                   type: string
                   description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres.'
-                  example: hksrlsdh
+                  example: wmgpsclmdvahybmnofepw
                 data_inicio:
                   type: string
                   description: 'O campo value não é uma data válida.'
-                  example: '2024-05-07T20:07:10'
+                  example: '2024-05-07T22:41:43'
                 data_fim:
                   type: string
                   description: 'O campo value não é uma data válida. O campo value deve ser uma data posterior a <code>data_inicio</code>.'
-                  example: '2095-07-10'
+                  example: '2087-06-28'
                 online:
                   type: boolean
                   description: ''
@@ -453,7 +615,7 @@ paths:
                 endereco:
                   type: string
                   description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres.'
-                  example: pfsplnipxtdcdcwlx
+                  example: jmrla
                 cidade_id:
                   type: string
                   description: ''
@@ -461,11 +623,11 @@ paths:
                 cep:
                   type: string
                   description: 'Must match the regex /\d{5}-\d{3}/.'
-                  example: 57853-757
+                  example: 96331-977
                 link:
                   type: string
                   description: 'Must be a valid URL.'
-                  example: 'http://www.crist.com/'
+                  example: 'https://www.dooley.com/placeat-dolor-nemo-vitae-voluptatibus-ut'
               required:
                 - descricao
                 - data_inicio
@@ -495,7 +657,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the evento.'
-        example: non
+        example: 9bfd5da9-015f-4497-b293-103b3d3a49c9
         required: true
         schema:
           type: string
@@ -550,7 +712,7 @@ paths:
                 page:
                   type: integer
                   description: 'O campo value deve ser pelo menos 1.'
-                  example: 7
+                  example: 69
                 per_page:
                   type: integer
                   description: 'O campo value deve ser pelo menos 1. O campo value não pode ser superior a 300.'
@@ -558,7 +720,7 @@ paths:
                 search:
                   type: string
                   description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres.'
-                  example: b
+                  example: rantgavasjt
     post:
       summary: ''
       operationId: postApiV1ManageUsers
@@ -597,11 +759,11 @@ paths:
                 name:
                   type: string
                   description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres.'
-                  example: swfrpc
+                  example: k
                 email:
                   type: string
                   description: 'O campo value deve ser um endereço de e-mail válido.'
-                  example: jasmin.schiller@example.org
+                  example: elliot.brakus@example.com
               required:
                 - name
                 - email
@@ -676,7 +838,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the user.'
-        example: id
+        example: 9bfd5da8-e970-4351-b50b-802e9bdea090
         required: true
         schema:
           type: string
@@ -706,7 +868,7 @@ paths:
         in: path
         name: user_id
         description: 'The ID of the user.'
-        example: et
+        example: 9bfd5da8-e970-4351-b50b-802e9bdea090
         required: true
         schema:
           type: string
@@ -749,11 +911,11 @@ paths:
                 evento_id:
                   type: string
                   description: ''
-                  example: est
+                  example: pariatur
                 nome:
                   type: string
                   description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres.'
-                  example: hrkvmpifejockpx
+                  example: yvtt
                 email:
                   type: string
                   description: ''
@@ -761,7 +923,7 @@ paths:
                 cpf:
                   type: string
                   description: 'O campo value deve ter pelo menos 11 caracteres. O campo value não pode ser superior a 14 caracteres.'
-                  example: ejspvml
+                  example: nqjrqbtv
               required:
                 - evento_id
                 - nome
@@ -817,15 +979,15 @@ paths:
                 page:
                   type: integer
                   description: 'O campo value deve ser pelo menos 1.'
-                  example: 65
+                  example: 22
                 per_page:
                   type: integer
                   description: 'O campo value deve ser pelo menos 1. O campo value não pode ser superior a 300.'
-                  example: 14
+                  example: 11
                 search:
                   type: string
                   description: 'O campo value deve ter pelo menos 3 caracteres. O campo value não pode ser superior a 50 caracteres.'
-                  example: ew
+                  example: biskgegiexdlb
   '/api/v1/inscricoes/{inscricao_id}':
     get:
       summary: ''
@@ -860,13 +1022,16 @@ paths:
         in: path
         name: inscricao_id
         description: 'The ID of the inscricao.'
-        example: minus
+        example: 9bfd5db1-a0e2-4928-8c19-a70612ea0305
         required: true
         schema:
           type: string
 tags:
   -
     name: Autenticação
+    description: ''
+  -
+    name: 'Categorias de despesas'
     description: ''
   -
     name: Dicionários
